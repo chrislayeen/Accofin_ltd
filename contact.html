@@ -518,11 +518,7 @@
                 }
 
                 try {
-                    const fetchPromise = fetch(url);
-                    document.body.style.opacity = '0';
-                    document.body.style.transition = 'opacity 0.2s ease-out';
-
-                    const response = await fetchPromise;
+                    const response = await fetch(url);
                     const html = await response.text();
                     const parser = new DOMParser();
                     const doc = parser.parseFromString(html, 'text/html');
@@ -530,10 +526,19 @@
                     const currentContent = document.querySelector('#content-area');
 
                     if (newContent && currentContent) {
+                        document.body.style.opacity = '0';
                         setTimeout(() => {
                             currentContent.innerHTML = newContent.innerHTML;
                             document.title = doc.title;
                             if (addToHistory) history.pushState(null, '', url);
+
+                            // Re-execute scripts in the swapped content
+                            currentContent.querySelectorAll('script').forEach(oldScript => {
+                                const newScript = document.createElement('script');
+                                Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                                oldScript.parentNode.replaceChild(newScript, oldScript);
+                            });
 
                             if (targetUrl.hash) {
                                 this.scrollToHash(targetUrl.hash);
