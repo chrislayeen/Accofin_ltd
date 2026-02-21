@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Accofin Consultancy - Indian Business Support</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0A192F",
+              accent: "#C5A880",
+              background: {
+                light: "#FAFAFA",
+                dark: "#111827",
+              },
+              text: {
+                main: "#333333",
+                muted: "#666666",
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            boxShadow: {
+              level1: "0 2px 4px rgba(0,0,0,0.1)",
+              level2: "0 8px 16px rgba(0,0,0,0.1)",
+            },
+            borderRadius: {
+              DEFAULT: "8px",
+            }
+          }
+        }
+      };
+    </script>
+<style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FAFAFA;
+        color: #333333;
+        line-height: 1.5;
+        overflow-x: hidden;
+      }
+      /* Typography System */
+      h1 { font-size: 48px !important; font-weight: 700 !important; line-height: 1.2 !important; }
+      h2 { font-size: 36px !important; font-weight: 600 !important; line-height: 1.3 !important; }
+      h3 { font-size: 24px !important; font-weight: 500 !important; line-height: 1.4 !important; }
+      .text-body-large { font-size: 18px !important; }
+      .text-body-regular { font-size: 16px !important; }
+      .text-caption { font-size: 14px !important; }
+      
+      /* Global Layout & Container */
+      .container-custom {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .section-spacing {
+        padding-top: 48px; padding-bottom: 48px;
+      }
+      @media (min-width: 768px) {
+        .section-spacing { padding-top: 64px; padding-bottom: 64px; }
+      }
+      @media (min-width: 1024px) {
+        .section-spacing { padding-top: 96px; padding-bottom: 96px; }
+      }
+      
+      /* Standardized Components */
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0A192F !important;
+        color: white !important;
+        border-radius: 8px !important;
+        padding: 12px 24px !important;
+        font-weight: 500 !important;
+        transition: transform 100ms ease, box-shadow 200ms ease !important;
+        text-decoration: none !important;
+        width: 100%;
+        text-align: center;
+        border: none !important;
+      }
+      @media (min-width: 640px) {
+        .btn-primary { width: auto; }
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+        text-decoration: underline !important;
+        text-decoration-color: #C5A880 !important;
+        text-underline-offset: 4px !important;
+        text-decoration-thickness: 2px !important;
+      }
+      
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent !important;
+        color: #0A192F !important;
+        border: 1px solid #0A192F !important;
+        border-radius: 8px !important;
+        padding: 12px 24px !important;
+        font-weight: 500 !important;
+        transition: background-color 200ms ease, transform 100ms ease !important;
+        text-decoration: none !important;
+        width: 100%;
+        text-align: center;
+      }
+      @media (min-width: 640px) {
+        .btn-secondary { width: auto; }
+      }
+      .btn-secondary:hover {
+        background-color: #0A192F !important;
+        color: white !important;
+      }
+      
+      .card-standard {
+        padding: 32px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        transition: transform 200ms ease, box-shadow 200ms ease !important;
+        background-color: white !important;
+        border: 1px solid #e5e7eb !important;
+      }
+      .card-standard:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+      }
+      
+      .form-input-standard {
+        width: 100% !important;
+        height: 48px !important;
+        border-radius: 8px !important;
+        border: 1px solid #d1d5db !important;
+        padding: 0 12px !important;
+        transition: border-color 200ms ease !important;
+      }
+      .form-input-standard:focus {
+        outline: none !important;
+        border-color: #C5A880 !important;
+        box-shadow: 0 0 0 1px #C5A880 !important;
+      }
+      
+      /* Reset h1/h2/h3 colors since they might be overridden by tailwind text-colors */
+      h1, h2, h3 { color: #0A192F !important; }
+      p { color: #333333 !important; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-body antialiased overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur-sm dark:border-slate-800 dark:bg-background-dark/90">
+<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-2">
+<div class="flex size-9 items-center justify-center rounded bg-corporate-blue text-white">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<span class="text-2xl font-display font-bold tracking-tight text-corporate-blue dark:text-white">Accofin</span>
+</div>
+<nav class="sticky top-0 z-50 bg-white border-b border-gray-200 h-[80px] flex items-center">
+<div class="container-custom flex justify-between items-center w-full">
+<a href="/" style="text-decoration: none;"><div class="flex items-center gap-2">
+<span class="text-2xl font-bold" style="color: #0A192F;">AccoFin</span>
+</div></a>
+<div class="hidden md:flex space-x-8">
+<a class="hover:text-[#C5A880] transition-colors duration-200" href="/indian_businesses.html" style="color: #333333; font-weight: 500;">Services</a>
+<a class="hover:text-[#C5A880] transition-colors duration-200" href="/how_we_work.html" style="color: #333333; font-weight: 500;">How We Work</a>
+<a class="hover:text-[#C5A880] transition-colors duration-200" href="/about.html" style="color: #333333; font-weight: 500;">About Us</a>
+<a class="hover:text-[#C5A880] transition-colors duration-200" href="/contact.html" style="color: #333333; font-weight: 500;">Contact</a>
+</div>
+<div class="hidden md:flex">
+<a class="btn-primary" href="/contact.html" style="padding: 10px 24px !important; font-size: 14px !important; width: auto;">Consultation</a>
+</div>
+<button class="md:hidden text-[#0A192F]">
+<span class="material-icons-outlined">menu</span>
+</button>
+</div>
+</nav>
+<div class="flex items-center gap-4">
+<button class="btn-primary">
+                    Schedule a Consultation
+                </button>
+<button class="md:hidden p-2 text-slate-600">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex min-h-screen flex-col">
+<section class="relative overflow-hidden bg-background-alt pt-20 pb-24 lg:pt-28 lg:pb-32 dark:bg-slate-900 section-spacing">
+<div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] container-custom"></div>
+<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex w-fit items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-corporate-blue tracking-wide uppercase">
+<span class="relative flex h-2 w-2">
+<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+<span class="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
+</span>
+                            Specialized for Indian Markets
+                        </div>
+<h1 class="tracking-tight sm:text-6xl lg:text-7xl dark:text-white leading-[1.1]">
+                            Business Setup, <br class="hidden lg:block"/>Finance Operations <span class="text-muted-blue italic font-serif">&amp;</span> Compliance
+                        </h1>
+<p class="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300 font-light">
+                            Comprehensive support for domestic Indian businesses. From entity formation and recurring financial compliance to complex labor law tracking and regulatory adherence.
+                        </p>
+<div class="mt-8 flex flex-wrap gap-4">
+<button class="btn-primary">
+                                Schedule a Discussion
+                            </button>
+<button class="btn-secondary">
+                                Services Overview
+                            </button>
+</div>
+<div class="mt-10 flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+<div class="flex -space-x-3 overflow-hidden">
+<div class="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-slate-200 text-xs font-bold text-slate-600 dark:border-slate-800">A</div>
+<div class="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-slate-300 text-xs font-bold text-slate-600 dark:border-slate-800">R</div>
+<div class="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-slate-400 text-xs font-bold text-white dark:border-slate-800">S</div>
+</div>
+<p class="font-medium">Trusted by 100+ growing enterprises</p>
+</div>
+</div>
+<div class="mt-16 lg:mt-0 lg:col-span-5">
+<div class="relative overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 shadow-xl border border-slate-200 dark:border-slate-700 aspect-[4/5] sm:aspect-[4/3] group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="Team analyzing financial charts on a table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC__2P-FM7uKouNeF6evKFQ7FhyVadZ6UsaK9Ya6XPUMl5BfJeviGBfmQsfXk0fxuZmzMxxg-vBU9NHgI-ZoEA6SQMZg2GxIFvZqHvcOYdnFR98Bgfi51yagGalIDzwgkq8GAvqRQ_VJ3GbaP5rGKDjIJy625IncKVBkiR5qQuSxzi6tC_ORdFd6Bg5WIoX4WuXDilAQPNGdsCX0grUHNAyfWu04aavx6HjyBf1jU0NYNFbuSnQI6kTV7f7pXdX2I9V2I2_SPewT_U');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<div class="backdrop-blur-md bg-white/10 border border-white/20 p-6 rounded-lg shadow-lg">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-1.5 bg-green-500/20 rounded text-green-300 border border-green-500/30">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+</div>
+<p class="text-white text-base font-display font-medium">Compliance Efficiency</p>
+</div>
+<div class="w-full bg-white/20 h-1.5 rounded-full overflow-hidden">
+<div class="bg-green-400 h-full rounded-full" style="width: 94%"></div>
+</div>
+<p class="text-xs text-slate-200 mt-3 font-light">94% reduction in late filing penalties for our clients.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-background-dark section-spacing" id="services">
+<div class="container-custom">
+<div class="mb-20 text-center md:text-left border-b border-slate-100 pb-8 dark:border-slate-800">
+<h2 class="uppercase tracking-widest">Our Services</h2>
+<h3 class="mt-3 tracking-tight sm:text-5xl dark:text-white">Structured Financial Solutions</h3>
+<p class="mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300 font-light">
+                        We handle the complexities of Indian corporate law and finance so you can focus on growth.
+                    </p>
+</div>
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+<div class="group relative flex flex-col overflow-hidden transition-all hover:border-corporate-blue/30 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-corporate-blue/50 card-standard">
+<div class="mb-6 flex h-14 w-14 items-center justify-center rounded bg-slate-100 text-slate-600 group-hover:bg-corporate-blue group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">domain_add</span>
+</div>
+<h3 class="mb-3 dark:text-white">Business Setup</h3>
+<p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                            Comprehensive formation services for all entity types. We handle the paperwork, approvals, and initial registrations.
+                        </p>
+<ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400 pt-4 border-t border-slate-100 dark:border-slate-700/50">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                Private Ltd Company
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                LLP &amp; Partnership Firms
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                PAN, TAN &amp; GST Reg.
+                            </li>
+</ul>
+</div>
+<div class="group relative flex flex-col overflow-hidden transition-all hover:border-corporate-blue/30 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-corporate-blue/50 card-standard">
+<div class="mb-6 flex h-14 w-14 items-center justify-center rounded bg-slate-100 text-slate-600 group-hover:bg-corporate-blue group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">receipt_long</span>
+</div>
+<h3 class="mb-3 dark:text-white">Finance &amp; Compliance</h3>
+<p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                            Recurring monthly support to ensure your books are clean and your taxes are filed on time, every time.
+                        </p>
+<ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400 pt-4 border-t border-slate-100 dark:border-slate-700/50">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                Monthly Accounting
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                GST &amp; TDS Filing
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                Financial Reporting
+                            </li>
+</ul>
+</div>
+<div class="group relative flex flex-col overflow-hidden transition-all hover:border-corporate-blue/30 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-corporate-blue/50 card-standard">
+<div class="mb-6 flex h-14 w-14 items-center justify-center rounded bg-slate-100 text-slate-600 group-hover:bg-corporate-blue group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h3 class="mb-3 dark:text-white">Labour Compliance</h3>
+<p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                            Protect your business from labor law violations with our structured coordination and tracking services.
+                        </p>
+<ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400 pt-4 border-t border-slate-100 dark:border-slate-700/50">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                EPF &amp; ESI Coordination
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                Professional Tax (PT)
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                Employment Tracking
+                            </li>
+</ul>
+</div>
+<div class="group relative flex flex-col overflow-hidden transition-all hover:border-corporate-blue/30 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-corporate-blue/50 card-standard">
+<div class="mb-6 flex h-14 w-14 items-center justify-center rounded bg-slate-100 text-slate-600 group-hover:bg-corporate-blue group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">policy</span>
+</div>
+<h3 class="mb-3 dark:text-white">Due Diligence</h3>
+<p class="mb-6 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                            Rigorous financial vetting and internal reviews to support acquisitions, investments, and risk management.
+                        </p>
+<ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400 pt-4 border-t border-slate-100 dark:border-slate-700/50">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                M&amp;A Support
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                Investment Readiness
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm text-corporate-blue">check</span>
+                                Internal Audit Reviews
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-background-alt dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 section-spacing">
+<div class="container-custom">
+<div class="flex flex-col md:flex-row gap-16 lg:gap-28 items-start">
+<div class="md:w-1/3 sticky top-24">
+<h2 class="tracking-tight dark:text-white mb-6">
+                            Confidentiality &amp; <br class="hidden lg:block"/> Operating Approach
+                        </h2>
+<p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed font-light">
+                            We prioritize data security and disciplined execution in every engagement. Our workflows are designed for bank-level trust.
+                        </p>
+<button class="hidden md:flex items-center gap-2 text-corporate-blue font-bold hover:text-blue-700 transition-colors group">
+                            Learn about our Security
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<div class="md:w-2/3 grid gap-8">
+<div class="flex gap-6 dark:bg-background-dark dark:border-slate-700 transition-shadow card-standard">
+<div class="flex-shrink-0">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-50 text-corporate-blue dark:bg-slate-800 dark:text-blue-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined">lock</span>
+</div>
+</div>
+<div>
+<h3 class="dark:text-white mb-3">Permissioned Workflows</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed font-light">
+                                    Secure access controls for all financial documents. We implement role-based access to ensure sensitive financial data is only visible to authorized personnel.
+                                </p>
+</div>
+</div>
+<div class="flex gap-6 dark:bg-background-dark dark:border-slate-700 transition-shadow card-standard">
+<div class="flex-shrink-0">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-50 text-corporate-blue dark:bg-slate-800 dark:text-blue-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined">folder_shared</span>
+</div>
+</div>
+<div>
+<h3 class="dark:text-white mb-3">Client-Controlled Drives</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed font-light">
+                                    Data remains in your control. We utilize organized, client-owned drive structures ensuring you retain full ownership and access history of your intellectual property.
+                                </p>
+</div>
+</div>
+<div class="flex gap-6 dark:bg-background-dark dark:border-slate-700 transition-shadow card-standard">
+<div class="flex-shrink-0">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-50 text-corporate-blue dark:bg-slate-800 dark:text-blue-300 border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined">verified</span>
+</div>
+</div>
+<div>
+<h3 class="dark:text-white mb-3">Disciplined Execution</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed font-light">
+                                    Rigorous adherence to compliance timelines. Our internal calendars and alert systems ensure zero missed deadlines for statutory filings.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-background-dark section-spacing">
+<div class="container-custom">
+<div class="relative overflow-hidden rounded-xl bg-corporate-blue px-8 py-16 shadow-2xl lg:flex lg:items-center lg:justify-between lg:px-20">
+<div class="relative z-10">
+<h2 class="tracking-tight sm:text-4xl">
+                            Ready to streamline your compliance?
+                        </h2>
+<p class="mt-4 max-w-xl text-lg text-slate-200 font-light">
+                            Book a free 30-minute consultation with our senior consultants to discuss your business structure and needs.
+                        </p>
+</div>
+<div class="mt-10 lg:mt-0 lg:shrink-0 relative z-10">
+<button class="inline-flex items-center rounded-md bg-white px-8 py-4 text-base font-bold text-corporate-blue shadow-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-corporate-blue transition-colors">
+                            Schedule a Discussion
+                        </button>
+</div>
+<div class="absolute top-0 right-0 h-full w-full opacity-10" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="py-16 mt-12 w-full" style="background-color: #0A192F; color: white;">
+<div class="container-custom">
+<div class="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-8" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+<div>
+<div class="text-2xl font-bold mb-4 text-white">AccoFin</div>
+<p class="text-sm" style="color: #cbd5e1;">Premium financial consultancy for startups and SMEs. Compliance made clear.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-white">Services</h4>
+<ul class="space-y-2 text-sm" style="color: #cbd5e1;">
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/indian_businesses.html">Business Setup</a></li>
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/indian_businesses.html">Finance &amp; Compliance</a></li>
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/indian_businesses.html">Tax Advisory</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-white">Company</h4>
+<ul class="space-y-2 text-sm" style="color: #cbd5e1;">
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/about.html">About Us</a></li>
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="#">Careers</a></li>
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-white">Contact</h4>
+<p class="text-sm mb-2" style="color: #cbd5e1;">123 Financial District, Gurugram, India</p>
+<p class="text-sm" style="color: #cbd5e1;">hello@accofin.com</p>
+</div>
+</div>
+<div class="mt-12 pt-8 text-sm text-center" style="border-top: 1px solid #1e293b; color: #94a3b8;">
+                © 2024 AccoFin Consultancy. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

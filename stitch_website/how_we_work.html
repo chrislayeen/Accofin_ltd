@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>How We Work - AccoFin Consultancy</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Google+Sans+Flex:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2B7CB6",
+                        secondary: "#1E293B",
+                        "navy-dark": "#0F172A",
+                        "background-light": "#F8F9FB",
+                        "background-dark": "#0F172A",
+                        "card-dark": "#1E293B",
+                        "text-light": "#334155",
+                        "text-dark": "#e2e8f0",
+                        "accent-blue-light": "#EAF4FA",
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Google Sans Flex"', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            opacity: 0;
+        }
+
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent header jitter on scroll */
+        nav {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform, backdrop-filter;
+        }
+
+        /* Cinematic Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes revealDrift {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+
+        .reveal-on-load {
+            opacity: 0;
+            animation: revealDrift 0.6s ease-out 0.1s forwards;
+        }
+
+        /* Smooth Anchor Landing */
+        section[id] {
+            scroll-margin-top: 100px;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(43, 124, 182, 0.05) 0%, rgba(30, 41, 59, 0.05) 100%);
+        }
+
+        .pattern-bg {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .dark .pattern-bg {
+            background-image: radial-gradient(#334155 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body id="top"
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans selection:bg-primary/10 transition-colors duration-300 animate-fade-in">
+    <!-- Navbar -->
+    <nav
+        class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+        <div class="max-w-[1600px] mx-auto px-6 lg:px-12">
+            <div class="flex justify-between h-20 items-center gap-8">
+                <!-- Left: Identity & Strategy -->
+                <div class="flex items-center gap-12">
+                    <a href="index.html" class="flex items-center gap-3 shrink-0">
+                        <div class="relative h-10 w-10 flex items-center justify-center">
+                            <div class="absolute inset-0 border-2 border-secondary rounded-full"
+                                style="clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%);"></div>
+                            <div class="absolute inset-0 border-2 border-primary rounded-full"
+                                style="clip-path: polygon(0 60%, 50% 100%, 100% 60%, 100% 100%, 0 100%);"></div>
+                            <span class="text-secondary font-sans text-xl font-bold z-10 -ml-1">A</span>
+                            <span class="text-primary font-sans text-xl font-bold z-10 -ml-0.5">F</span>
+                        </div>
+                        <span
+                            class="text-2xl font-bold text-secondary dark:text-white tracking-tight font-sans">Acco<span
+                                class="text-primary">Fin</span> <span
+                                class="text-gray-500 font-normal text-lg ml-1 hidden lg:inline">Consultancy</span></span>
+                    </a>
+
+                    <!-- Strategic Segment Switcher (Grouping with Logo) -->
+                    <div
+                        class="hidden lg:flex bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-full p-1 border border-gray-200/50 dark:border-gray-700/50">
+                        <a href="global_companies.html" data-segment="global"
+                            class="px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full">Global
+                            Companies</a>
+                        <a href="indian_businesses.html" data-segment="indian"
+                            class="px-5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-primary transition rounded-full">Indian
+                            Businesses</a>
+                    </div>
+                </div>
+
+                <!-- Right: Navigation & Action -->
+                <div class="hidden md:flex items-center gap-10">
+                    <div class="flex space-x-8 items-center">
+                        <a class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-semibold transition"
+                            href="index.html#top">Home</a>
+                        <a class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-semibold transition"
+                            href="index.html#services">Services</a>
+                        <a class="text-sm text-primary dark:text-white font-bold transition" href="how_we_work.html">How
+                            We Work</a>
+                        <a class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-semibold transition"
+                            href="about.html">About</a>
+                        <a class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white font-semibold transition"
+                            href="contact.html">Contact</a>
+                    </div>
+
+                    <a class="bg-secondary hover:bg-primary dark:bg-white dark:text-secondary dark:hover:bg-primary dark:hover:text-white text-white px-8 py-3 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-sm shrink-0"
+                        href="contact.html">
+                        Schedule Consultation
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <span class="material-icons-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="content-area">
+        <!-- Section Header -->
+        <header
+            class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden reveal-on-load bg-gradient-to-b from-white to-background-light dark:from-background-dark dark:to-gray-900">
+            <div class="absolute inset-0 opacity-20 dark:opacity-10 pointer-events-none">
+                <div
+                    class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary/20 blur-3xl mix-blend-multiply">
+                </div>
+                <div
+                    class="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-secondary/20 dark:bg-gray-800 blur-3xl mix-blend-multiply">
+                </div>
+            </div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1
+                    class="text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight text-secondary dark:text-white mb-6">
+                    Our Operating System for <span class="text-primary italic">Financial Compliance</span>
+                </h1>
+                <p
+                    class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
+                    Navigating regulatory mazes requires a system. We simplify complex compliance through our
+                    proprietary
+                    <span class="font-semibold text-secondary dark:text-white">calendar-led operating system</span>,
+                    transforming chaos into structured execution.
+                </p>
+            </div>
+        </header>
+
+        <!-- Process Timeline -->
+        <section class="pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 relative bg-background-light dark:bg-background-dark">
+            <div class="max-w-5xl mx-auto relative">
+                <div
+                    class="absolute left-8 top-8 bottom-8 w-0.5 bg-gradient-to-b from-secondary via-primary/50 to-transparent dark:via-blue-900 hidden md:block opacity-30">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="relative pl-0 md:pl-28 py-10 group">
+                    <!-- Desktop Connector Icon -->
+                    <div
+                        class="hidden md:flex absolute left-0 top-10 w-20 h-20 bg-white dark:bg-card-dark rounded-full border border-gray-100 dark:border-gray-800 items-center justify-center z-20 shadow-xl group-hover:scale-110 group-hover:border-[#D4AF37] transition-all duration-500">
+                        <div
+                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+                            <span
+                                class="material-icons-outlined text-primary group-hover:text-white text-2xl">map</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white dark:bg-card-dark rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-2xl hover:border-[#D4AF37]/30 transition-all duration-500 relative overflow-hidden">
+                        <div class="flex items-center mb-6 md:hidden">
+                            <div
+                                class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mr-5 border border-blue-100 dark:border-blue-800">
+                                <span class="material-icons-outlined text-primary text-2xl">map</span>
+                            </div>
+                            <div>
+                                <span
+                                    class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1 block">Phase
+                                    01</span>
+                                <h3 class="text-xl font-serif font-bold text-secondary dark:text-white">Discovery</h3>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="hidden md:block">
+                                <span
+                                    class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-3 block">Process
+                                    Phase 01</span>
+                                <h3 class="text-3xl font-serif font-bold text-secondary dark:text-white tracking-tight">
+                                    Discovery & Scope Mapping</h3>
+                            </div>
+                            <span
+                                class="hidden md:block text-[10px] font-bold text-primary bg-primary/5 px-4 py-2 rounded-full border border-primary/10 tracking-widest uppercase">Standardized
+                                Protocol</span>
+                        </div>
+
+                        <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8 font-light max-w-3xl">
+                            We begin by mapping your entire financial and legal entity structure. This phase identifies
+                            every compliance touchpoint and potential risk area specific to your industry and operations
+                            in
+                            India.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div
+                                class="flex items-center p-4 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-800">
+                                <span class="material-icons-outlined text-[#D4AF37] mr-4">analytics</span>
+                                <span class="text-sm font-medium text-secondary dark:text-gray-200">Comprehensive Entity
+                                    Mapping</span>
+                            </div>
+                            <div
+                                class="flex items-center p-4 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-800">
+                                <span class="material-icons-outlined text-[#D4AF37] mr-4">gpp_maybe</span>
+                                <span class="text-sm font-medium text-secondary dark:text-gray-200">Risk Area
+                                    Identification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative pl-0 md:pl-28 py-10 group">
+                    <div
+                        class="hidden md:flex absolute left-0 top-10 w-20 h-20 bg-white dark:bg-card-dark rounded-full border border-gray-100 dark:border-gray-800 items-center justify-center z-20 shadow-xl group-hover:scale-110 group-hover:border-[#D4AF37] transition-all duration-500">
+                        <div
+                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+                            <span
+                                class="material-icons-outlined text-primary group-hover:text-white text-2xl">calendar_month</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white dark:bg-card-dark rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-2xl hover:border-[#D4AF37]/30 transition-all duration-500 relative overflow-hidden">
+                        <div class="flex items-center mb-6 md:hidden">
+                            <div
+                                class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mr-5 border border-blue-100 dark:border-blue-800">
+                                <span class="material-icons-outlined text-primary text-2xl">calendar_month</span>
+                            </div>
+                            <div>
+                                <span
+                                    class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1 block">Phase
+                                    02</span>
+                                <h3 class="text-xl font-serif font-bold text-secondary dark:text-white">Planning</h3>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="hidden md:block">
+                                <span
+                                    class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-3 block">Process
+                                    Phase 02</span>
+                                <h3 class="text-3xl font-serif font-bold text-secondary dark:text-white tracking-tight">
+                                    Workflow & Calendar Setup</h3>
+                            </div>
+                            <span
+                                class="hidden md:block text-[10px] font-bold text-gray-400 bg-gray-50 dark:bg-gray-800 px-4 py-2 rounded-full border border-gray-100 dark:border-gray-700 tracking-widest uppercase">System
+                                Initialization</span>
+                        </div>
+
+                        <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8 font-light max-w-3xl">
+                            We translate requirements into a rigorous calendar-led system. Custom checklists are
+                            created,
+                            and document workflows are established to ensure information flows seamlessly from your team
+                            to
+                            ours well ahead of deadlines.
+                        </p>
+
+                        <div
+                            class="bg-gray-50 dark:bg-background-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800 flex items-center gap-6">
+                            <div
+                                class="w-12 h-12 bg-white dark:bg-card-dark rounded-xl shadow-sm flex items-center justify-center border border-gray-100 dark:border-gray-700">
+                                <span class="material-icons-outlined text-[#D4AF37]">fact_check</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-secondary dark:text-white text-sm">Systematized Checklists
+                                </h4>
+                                <p class="text-xs text-gray-400 mt-1">Standardized document collection protocols and
+                                    rigorous verification gates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 (The Engine) -->
+                <div class="relative pl-0 md:pl-28 py-10 group">
+                    <div
+                        class="hidden md:flex absolute left-0 top-10 w-20 h-20 bg-primary rounded-full border-4 border-white dark:border-gray-900 items-center justify-center z-20 shadow-2xl group-hover:scale-110 transition-all duration-500">
+                        <span class="material-icons-outlined text-white text-3xl">precision_manufacturing</span>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-secondary to-navy-dark dark:from-navy-dark dark:to-black rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden group/card border border-white/10">
+                        <!-- Premium Background Accent -->
+                        <div
+                            class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-20 rounded-full -mr-32 -mt-32 blur-3xl group-hover/card:opacity-30 transition-opacity">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-64 h-64 bg-[#D4AF37] opacity-10 rounded-full -ml-24 -mb-24 blur-3xl">
+                        </div>
+
+                        <div class="relative z-10">
+                            <div class="flex items-center mb-6 md:hidden">
+                                <div
+                                    class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mr-5 border border-white/20">
+                                    <span
+                                        class="material-icons-outlined text-white text-2xl">precision_manufacturing</span>
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em] mb-1 block">Phase
+                                        03</span>
+                                    <h3 class="text-xl font-serif font-bold text-white">Execution</h3>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-start mb-6">
+                                <div class="hidden md:block">
+                                    <span
+                                        class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-3 block">Process
+                                        Phase 03</span>
+                                    <h3 class="text-3xl font-serif font-bold text-white tracking-tight">Execution
+                                        Cadence
+                                    </h3>
+                                </div>
+                                <span
+                                    class="hidden md:block text-[10px] font-bold text-[#D4AF37] bg-white/10 px-4 py-2 rounded-full border border-[#D4AF37]/30 tracking-widest uppercase">The
+                                    Operating Core</span>
+                            </div>
+
+                            <p class="text-gray-300 text-lg leading-relaxed mb-10 font-light max-w-3xl">
+                                This is the engine of our operating system. We maintain a strict monthly execution
+                                rhythm,
+                                processing filings, payroll, and accounts with an audit-ready approach. Every
+                                transaction is
+                                treated as if it were being audited tomorrow.
+                            </p>
+
+                            <div class="flex flex-wrap gap-4">
+                                <div
+                                    class="px-5 py-2.5 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-primary"></span>
+                                    <span class="text-xs font-bold text-white uppercase tracking-wider">Monthly
+                                        Closures</span>
+                                </div>
+                                <div
+                                    class="px-5 py-2.5 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+                                    <span
+                                        class="text-xs font-bold text-white uppercase tracking-wider">Audit-Ready</span>
+                                </div>
+                                <div
+                                    class="px-5 py-2.5 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3 hover:bg-white/10 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                                    <span class="text-xs font-bold text-white uppercase tracking-wider">Zero
+                                        Backlog</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative pl-0 md:pl-28 py-10 group">
+                    <div
+                        class="hidden md:flex absolute left-0 top-10 w-20 h-20 bg-white dark:bg-card-dark rounded-full border border-gray-100 dark:border-gray-800 items-center justify-center z-20 shadow-xl group-hover:scale-110 group-hover:border-[#D4AF37] transition-all duration-500">
+                        <div
+                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
+                            <span
+                                class="material-icons-outlined text-primary group-hover:text-white text-2xl">dashboard</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white dark:bg-card-dark rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-2xl hover:border-[#D4AF37]/30 transition-all duration-500 relative overflow-hidden">
+                        <div class="flex items-center mb-6 md:hidden">
+                            <div
+                                class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mr-5 border border-blue-100 dark:border-blue-800">
+                                <span class="material-icons-outlined text-primary text-2xl">dashboard</span>
+                            </div>
+                            <div>
+                                <span
+                                    class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1 block">Phase
+                                    04</span>
+                                <h3 class="text-xl font-serif font-bold text-secondary dark:text-white">Review</h3>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="hidden md:block">
+                                <span
+                                    class="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-3 block">Process
+                                    Phase 04</span>
+                                <h3 class="text-3xl font-serif font-bold text-secondary dark:text-white tracking-tight">
+                                    Reporting & Governance</h3>
+                            </div>
+                            <span
+                                class="hidden md:block text-[10px] font-bold text-gray-400 bg-gray-50 dark:bg-gray-800 px-4 py-2 rounded-full border border-gray-100 dark:border-gray-700 tracking-widest uppercase">Strategic
+                                Oversight</span>
+                        </div>
+
+                        <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8 font-light max-w-3xl">
+                            Total visibility for your management team. We close the loop with comprehensive MIS packs
+                            and
+                            dashboard visibility, ensuring you have clear insight into compliance status and financial
+                            health.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-6 mt-6">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-[#D4AF37]/10 flex items-center justify-center border border-[#D4AF37]/20">
+                                    <span class="material-icons-outlined text-[#D4AF37] text-sm">visibility</span>
+                                </div>
+                                <span
+                                    class="text-sm font-bold text-secondary dark:text-gray-200 uppercase tracking-widest">Detailed
+                                    MIS Packs</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                                    <span class="material-icons-outlined text-primary text-sm">bar_chart</span>
+                                </div>
+                                <span
+                                    class="text-sm font-bold text-secondary dark:text-gray-200 uppercase tracking-widest">KPI
+                                    Dashboards</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process -->
+        <section id="process"
+            class="py-24 md:py-32 relative reveal-on-load bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-serif font-bold text-secondary dark:text-white mb-4">Our Operating
+                        Principles
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The core values that drive our
+                        operating
+                        system and ensure the highest standard of service delivery.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-white dark:bg-gray-900 rounded-xl flex items-center justify-center mb-6 shadow-sm text-primary ring-1 ring-gray-100 dark:ring-gray-700">
+                            <span class="material-icons-outlined text-3xl">verified_user</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-3">Authenticity</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light">
+                            We operate with radical transparency. Our advice is unbiased, honest, and always in the best
+                            interest of your long-term compliance health.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-white dark:bg-gray-900 rounded-xl flex items-center justify-center mb-6 shadow-sm text-primary ring-1 ring-gray-100 dark:ring-gray-700">
+                            <span class="material-icons-outlined text-3xl">lock</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-3">Confidentiality</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light">
+                            Your data is sacred. We employ enterprise-grade security protocols and strict data
+                            governance to
+                            keep sensitive information secure.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-colors">
+                        <div
+                            class="w-14 h-14 bg-white dark:bg-gray-900 rounded-xl flex items-center justify-center mb-6 shadow-sm text-primary ring-1 ring-gray-100 dark:ring-gray-700">
+                            <span class="material-icons-outlined text-3xl">settings_suggest</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary dark:text-white mb-3">Control</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-light">
+                            We empower you with control, not dependency. Our systems give you oversight over operations,
+                            with Accofin acting as your navigator.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CT A Section -->
+        <section class="bg-navy-dark dark:bg-black py-24 md:py-32 relative overflow-hidden">
+            <div class="absolute inset-0 pattern-bg opacity-10"></div>
+            <div
+                class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-primary/20 to-transparent pointer-events-none">
+            </div>
+            <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+                <h2 class="text-5xl md:text-6xl font-serif text-white mb-6 tracking-tight">Ready to streamline your
+                    financial operations?</h2>
+                <p class="text-gray-300 text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                    Join 500+ global companies and Indian businesses who trust Accofin with their compliance and
+                    financial
+                    strategy.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-xl text-secondary bg-[#D4AF37] hover:bg-white transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                        href="contact.html">
+                        Schedule a Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary dark:bg-navy-dark text-white py-16 md:py-24 border-t border-gray-800">
+        <div class="max-w-[1600px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="h-10 w-10 flex items-center justify-center bg-white rounded-full">
+                            <span class="text-secondary font-sans text-xl font-bold">A</span>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight font-sans text-white">Acco<span
+                                class="text-primary">Fin</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Premier advisory for complex cross-border financial operations. Bridging global excellence with
+                        Indian market depth.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest text-primary">Capabilities
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="global_companies.html" class="hover:text-primary transition">Global FDI & Entry</a>
+                        </li>
+                        <li><a href="indian_businesses.html" class="hover:text-primary transition">Capital Raising</a>
+                        </li>
+                        <li><a href="how_we_work.html" class="hover:text-primary transition">Performance Strategy</a>
+                        </li>
+                        <li><a href="about.html" class="hover:text-primary transition">Leadership Advisory</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest text-primary">Intelligence
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li><a href="contact.html" class="hover:text-primary transition">Client Portal</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Compliance Updates</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Sector Insights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest text-primary">Connect</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition">
+                            <span class="material-icons-outlined text-primary text-lg">location_on</span>
+                            <span>Mumbai & Bengaluru</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition">
+                            <span class="material-icons-outlined text-primary text-lg">public</span>
+                            <span>Global Network</span>
+                        </div>
+                        <a href="contact.html"
+                            class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-xs font-bold hover:bg-blue-600 transition shadow-lg shadow-primary/20">
+                            Book Strategic Briefing
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-16 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-gray-500 text-xs">
+                    © 2026 AccoFin Consultancy. All rights reserved. Strategic excellence for the global economy.
+                </p>
+                <div class="flex gap-8">
+                    <a href="index.html#top" class="text-gray-500 hover:text-primary transition text-xs">Privacy
+                        Policy</a>
+                    <a href="index.html#top" class="text-gray-500 hover:text-primary transition text-xs">Terms of
+                        Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const router = {
+            init() {
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('sw.js').catch(() => { });
+                }
+                document.addEventListener('click', e => {
+                    const link = e.target.closest('a');
+                    if (this.shouldHandle(link)) {
+                        e.preventDefault();
+                        this.navigate(link.href);
+                    }
+                });
+                window.addEventListener('popstate', () => this.navigate(window.location.href, false));
+                this.setupPrefetching();
+                this.fadeIn();
+                this.handleHashAction();
+            },
+            shouldHandle(link) {
+                if (!link || !link.href) return false;
+                const url = new URL(link.href);
+                const isInternal = url.origin === window.location.origin;
+                const href = link.getAttribute('href');
+                const isRelHash = href && href.startsWith('#');
+                return isInternal && !link.hasAttribute('download') && link.target !== '_blank' && !isRelHash;
+            },
+            async navigate(url, addToHistory = true) {
+                const targetUrl = new URL(url);
+                const isSamePage = targetUrl.pathname === window.location.pathname ||
+                    (targetUrl.pathname === '/' && window.location.pathname === '/index.html') ||
+                    (targetUrl.pathname === '/index.html' && window.location.pathname === '/');
+
+                if (isSamePage && targetUrl.hash) {
+                    if (addToHistory) history.pushState(null, '', url);
+                    this.scrollToHash(targetUrl.hash);
+                    return;
+                }
+
+                try {
+                    const fetchPromise = fetch(url);
+                    document.body.style.opacity = '0';
+                    document.body.style.transition = 'opacity 0.2s ease-out';
+
+                    const response = await fetchPromise;
+                    const html = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const newContent = doc.querySelector('#content-area');
+                    const currentContent = document.querySelector('#content-area');
+
+                    if (newContent && currentContent) {
+                        setTimeout(() => {
+                            currentContent.innerHTML = newContent.innerHTML;
+                            document.title = doc.title;
+                            if (addToHistory) history.pushState(null, '', url);
+
+                            if (targetUrl.hash) {
+                                this.scrollToHash(targetUrl.hash);
+                            } else {
+                                window.scrollTo(0, 0);
+                            }
+
+                            this.updateNavLinks();
+                            this.fadeIn();
+                            this.setupPrefetching();
+                        }, 200);
+                    } else { window.location.href = url; }
+                } catch (e) { window.location.href = url; }
+            },
+            scrollToHash(hash) {
+                const el = document.querySelector(hash);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                } else if (hash === '#top' || hash === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            },
+            handleHashAction() {
+                if (window.location.hash) {
+                    setTimeout(() => this.scrollToHash(window.location.hash), 500);
+                }
+            },
+            updateNavLinks() {
+                const path = window.location.pathname;
+                const page = path.split('/').pop();
+
+                document.querySelectorAll('nav a:not([data-segment])').forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (!href) return;
+                    const isHome = path === '/' || path === '/index.html';
+                    const isMatch = isHome
+                        ? (href === 'index.html#top' || href === 'index.html' || href === '/' || href === '#top')
+                        : (href.includes(page) && !href.includes('#'));
+                    if (isMatch) {
+                        link.classList.add('text-primary', 'font-bold');
+                        link.classList.remove('text-gray-600', 'dark:text-gray-300', 'font-semibold');
+                    } else {
+                        link.classList.remove('text-primary', 'font-bold');
+                        link.classList.add('text-gray-600', 'dark:text-gray-300', 'font-semibold');
+                    }
+                });
+
+                const ACTIVE_PILL = ['bg-white', 'dark:bg-gray-700', 'shadow-sm', 'text-primary', 'dark:text-white'];
+                const INACTIVE_PILL = ['text-gray-600', 'dark:text-gray-300', 'hover:text-primary'];
+                document.querySelectorAll('[data-segment]').forEach(link => {
+                    const seg = link.getAttribute('data-segment');
+                    const isActive = (seg === 'global' && page === 'global_companies.html') ||
+                        (seg === 'indian' && page === 'indian_businesses.html');
+                    if (isActive) {
+                        link.classList.add(...ACTIVE_PILL);
+                        link.classList.remove(...INACTIVE_PILL);
+                    } else {
+                        link.classList.remove(...ACTIVE_PILL);
+                        link.classList.add(...INACTIVE_PILL);
+                    }
+                });
+            },
+            fadeIn() { requestAnimationFrame(() => { document.body.style.opacity = '1'; }); },
+            setupPrefetching() {
+                document.querySelectorAll('a').forEach(link => {
+                    if (this.shouldHandle(link)) {
+                        link.addEventListener('mouseenter', () => {
+                            const p = document.createElement('link');
+                            p.rel = 'prefetch'; p.href = link.href;
+                            document.head.appendChild(p);
+                        }, { once: true });
+                    }
+                });
+            }
+        };
+        router.init();
+    </script>
+</body>
+
+</html>

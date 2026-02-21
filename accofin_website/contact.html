@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Our Experts - Accofin Consultancy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0A192F",
+              accent: "#C5A880",
+              background: {
+                light: "#FAFAFA",
+                dark: "#111827",
+              },
+              text: {
+                main: "#333333",
+                muted: "#666666",
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            boxShadow: {
+              level1: "0 2px 4px rgba(0,0,0,0.1)",
+              level2: "0 8px 16px rgba(0,0,0,0.1)",
+            },
+            borderRadius: {
+              DEFAULT: "8px",
+            }
+          }
+        }
+      };
+    </script>
+<style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FAFAFA;
+        color: #333333;
+        line-height: 1.5;
+        overflow-x: hidden;
+      }
+      /* Typography System */
+      h1 { font-size: 48px !important; font-weight: 700 !important; line-height: 1.2 !important; }
+      h2 { font-size: 36px !important; font-weight: 600 !important; line-height: 1.3 !important; }
+      h3 { font-size: 24px !important; font-weight: 500 !important; line-height: 1.4 !important; }
+      .text-body-large { font-size: 18px !important; }
+      .text-body-regular { font-size: 16px !important; }
+      .text-caption { font-size: 14px !important; }
+      
+      /* Global Layout & Container */
+      .container-custom {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .section-spacing {
+        padding-top: 48px; padding-bottom: 48px;
+      }
+      @media (min-width: 768px) {
+        .section-spacing { padding-top: 64px; padding-bottom: 64px; }
+      }
+      @media (min-width: 1024px) {
+        .section-spacing { padding-top: 96px; padding-bottom: 96px; }
+      }
+      
+      /* Standardized Components */
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0A192F !important;
+        color: white !important;
+        border-radius: 8px !important;
+        padding: 12px 24px !important;
+        font-weight: 500 !important;
+        transition: transform 100ms ease, box-shadow 200ms ease !important;
+        text-decoration: none !important;
+        width: 100%;
+        text-align: center;
+        border: none !important;
+      }
+      @media (min-width: 640px) {
+        .btn-primary { width: auto; }
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+        text-decoration: underline !important;
+        text-decoration-color: #C5A880 !important;
+        text-underline-offset: 4px !important;
+        text-decoration-thickness: 2px !important;
+      }
+      
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent !important;
+        color: #0A192F !important;
+        border: 1px solid #0A192F !important;
+        border-radius: 8px !important;
+        padding: 12px 24px !important;
+        font-weight: 500 !important;
+        transition: background-color 200ms ease, transform 100ms ease !important;
+        text-decoration: none !important;
+        width: 100%;
+        text-align: center;
+      }
+      @media (min-width: 640px) {
+        .btn-secondary { width: auto; }
+      }
+      .btn-secondary:hover {
+        background-color: #0A192F !important;
+        color: white !important;
+      }
+      
+      .card-standard {
+        padding: 32px !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        transition: transform 200ms ease, box-shadow 200ms ease !important;
+        background-color: white !important;
+        border: 1px solid #e5e7eb !important;
+      }
+      .card-standard:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+      }
+      
+      .form-input-standard {
+        width: 100% !important;
+        height: 48px !important;
+        border-radius: 8px !important;
+        border: 1px solid #d1d5db !important;
+        padding: 0 12px !important;
+        transition: border-color 200ms ease !important;
+      }
+      .form-input-standard:focus {
+        outline: none !important;
+        border-color: #C5A880 !important;
+        box-shadow: 0 0 0 1px #C5A880 !important;
+      }
+      
+      /* Reset h1/h2/h3 colors since they might be overridden by tailwind text-colors */
+      h1, h2, h3 { color: #0A192F !important; }
+      p { color: #333333 !important; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-800 dark:text-slate-200 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white border-b border-gray-200 h-[80px] flex items-center">
+<div class="container-custom flex justify-between items-center w-full">
+<a href="/" style="text-decoration: none;"><div class="flex items-center gap-2">
+<span class="text-2xl font-bold" style="color: #0A192F;">AccoFin</span>
+</div></a>
+<div class="hidden md:flex space-x-8">
+<a class="hover:text-[#C5A880] transition-colors duration-200" href="/indian_businesses.html" style="color: #333333; font-weight: 500;">Services</a>
+<a class="hover:text-[#C5A880] transition-colors duration-200" href="/how_we_work.html" style="color: #333333; font-weight: 500;">How We Work</a>
+<a class="hover:text-[#C5A880] transition-colors duration-200" href="/about.html" style="color: #333333; font-weight: 500;">About Us</a>
+<a class="hover:text-[#C5A880] transition-colors duration-200" href="/contact.html" style="color: #333333; font-weight: 500;">Contact</a>
+</div>
+<div class="hidden md:flex">
+<a class="btn-primary" href="/contact.html" style="padding: 10px 24px !important; font-size: 14px !important; width: auto;">Consultation</a>
+</div>
+<button class="md:hidden text-[#0A192F]">
+<span class="material-icons-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="py-12 md:py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h1 class="md:text-5xl dark:text-white mb-6 tracking-tight">Contact Our Experts</h1>
+<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Ready to streamline your financial operations? Email us with a brief about your business, location(s), and what support you need. We’ll respond with next steps.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-5 space-y-8">
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+<h3 class="dark:text-white mb-6">Get in Touch</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 bg-accent-blue dark:bg-blue-900/20 rounded-full flex items-center justify-center text-primary">
+<i class="fas fa-phone-alt"></i>
+</div>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">Phone</p>
+<p class="text-lg font-medium text-slate-900 dark:text-white">+91 22 4567 8900</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Mon-Fri, 9am - 6pm IST</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 bg-accent-blue dark:bg-blue-900/20 rounded-full flex items-center justify-center text-primary">
+<i class="fas fa-envelope"></i>
+</div>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">Email</p>
+<a class="text-lg font-medium text-slate-900 dark:text-white hover:text-primary transition" href="mailto:info@accofinconsultancy.com">info@accofinconsultancy.com</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="flex-shrink-0 mt-1">
+<div class="w-10 h-10 bg-accent-blue dark:bg-blue-900/20 rounded-full flex items-center justify-center text-primary">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">Headquarters</p>
+<address class="text-base text-slate-900 dark:text-white not-italic leading-relaxed">
+                                        Technopark Campus<br/>
+                                        Trivandrum, Kerala - 695581<br/>
+                                        India
+                                    </address>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-700">
+<a class="btn-primary" href="#">
+<i class="fab fa-whatsapp text-xl"></i>
+<span>Chat via WhatsApp</span>
+</a>
+<p class="text-xs text-center text-slate-400 dark:text-slate-500 mt-3">Usually replies within an hour</p>
+</div>
+</div>
+<div class="bg-accent-blue dark:bg-primary/20 p-6 rounded-xl border border-primary/10">
+<h4 class="font-semibold text-primary mb-2">Privacy Assurance</h4>
+<p class="text-sm text-slate-700 dark:text-slate-300 font-medium mb-1">
+                            Note: We operate with a privacy-first workflow.
+                        </p>
+<p class="text-sm text-slate-700 dark:text-slate-300">
+                            We do not require clients to store data on our public servers.
+                        </p>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="bg-surface-light dark:bg-surface-dark p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-secondary via-primary to-secondary"></div>
+<h2 class="dark:text-white mb-6">Send us a message</h2>
+<form action="#" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="firstName">First Name</label>
+<input class="form-input-standard" id="firstName" placeholder="John" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="lastName">Last Name</label>
+<input class="form-input-standard" id="lastName" placeholder="Doe" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="email">Business Email</label>
+<input class="form-input-standard" id="email" placeholder="john@company.com" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="service">I'm interested in...</label>
+<div class="relative">
+<select class="form-input-standard" id="service">
+<option disabled="" selected="" value="">Select a service type</option>
+<option value="subsidiary">India Subsidiary Setup (Incorporation + FEMA)</option>
+<option value="compliance">Ongoing Compliance (GST / TDS / Payroll)</option>
+<option value="accounting">Outsourced Accounting &amp; Reporting</option>
+<option value="advisory">Strategic Financial Advisory</option>
+<option value="other">Other Inquiry</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+<i class="fas fa-chevron-down text-xs"></i>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2" for="message">How can we help?</label>
+<textarea class="form-input-standard" id="message" placeholder="Tell us about your project requirements..." rows="4"></textarea>
+</div>
+<div class="pt-2">
+<button class="btn-primary" type="submit">
+                                    Send Message
+                                </button>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-3">By submitting this form, you agree to our privacy policy.</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="mt-20">
+<div class="w-full h-80 rounded-2xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-700 relative bg-gray-200 dark:bg-gray-800">
+<div class="absolute inset-0 z-10 pointer-events-none bg-primary/5 dark:bg-blue-900/10"></div>
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252543.5661208953!2d76.78408846067963!3d8.500037887550293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1683232323232!5m2!1sen!2sin" style="border:0; filter: grayscale(1) opacity(0.8);" title="Google Maps Location - Trivandrum" width="100%">
+</iframe>
+</div>
+</div>
+</div>
+</main>
+<footer class="py-16 mt-12 w-full" style="background-color: #0A192F; color: white;">
+<div class="container-custom">
+<div class="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-8" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+<div>
+<div class="text-2xl font-bold mb-4 text-white">AccoFin</div>
+<p class="text-sm" style="color: #cbd5e1;">Premium financial consultancy for startups and SMEs. Compliance made clear.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-white">Services</h4>
+<ul class="space-y-2 text-sm" style="color: #cbd5e1;">
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/indian_businesses.html">Business Setup</a></li>
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/indian_businesses.html">Finance &amp; Compliance</a></li>
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/indian_businesses.html">Tax Advisory</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-white">Company</h4>
+<ul class="space-y-2 text-sm" style="color: #cbd5e1;">
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/about.html">About Us</a></li>
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="#">Careers</a></li>
+<li><a class="hover:text-[#C5A880] transition-colors duration-200" href="/contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-white">Contact</h4>
+<p class="text-sm mb-2" style="color: #cbd5e1;">123 Financial District, Gurugram, India</p>
+<p class="text-sm" style="color: #cbd5e1;">hello@accofin.com</p>
+</div>
+</div>
+<div class="mt-12 pt-8 text-sm text-center" style="border-top: 1px solid #1e293b; color: #94a3b8;">
+                © 2024 AccoFin Consultancy. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
