@@ -134,7 +134,12 @@ const router = {
             const pill = document.getElementById(pillId);
             if (!container || !pill) return;
 
-            const activeLink = container.querySelector(`[data-segment="${page === 'global_companies.html' ? 'global' : 'indian'}"]`);
+            let targetSegment = null;
+            if (page === 'global_companies.html') targetSegment = 'global';
+            else if (page === 'indian_businesses.html') targetSegment = 'indian';
+
+            const activeLink = targetSegment ? container.querySelector(`[data-segment="${targetSegment}"]`) : null;
+
             if (activeLink) {
                 pill.style.opacity = '1';
                 pill.style.left = activeLink.offsetLeft + 'px';
@@ -152,6 +157,11 @@ const router = {
                 });
             } else {
                 pill.style.opacity = '0';
+                // Reset all links to default unselected state
+                container.querySelectorAll('[data-segment]').forEach(link => {
+                    link.classList.remove('text-primary', 'dark:text-white');
+                    link.classList.add('text-gray-600', 'dark:text-gray-300');
+                });
             }
         };
 
