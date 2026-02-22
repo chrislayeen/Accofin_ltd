@@ -41,79 +41,7 @@
             },
         };
     </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            opacity: 0;
-        }
-
-        :root {
-            scroll-behavior: smooth;
-        }
-
-        /* Prevent header jitter on scroll */
-        nav {
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            will-change: transform, backdrop-filter;
-        }
-
-        /* Cinematic Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes revealDrift {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 0.4s ease-out forwards;
-        }
-
-        .reveal-on-load {
-            opacity: 0;
-            animation: revealDrift 0.6s ease-out 0.1s forwards;
-        }
-
-        /* Smooth Anchor Landing */
-        section[id] {
-            scroll-margin-top: 100px;
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, rgba(43, 124, 182, 0.05) 0%, rgba(30, 41, 59, 0.05) 100%);
-        }
-
-        .pattern-bg {
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
-        .dark .pattern-bg {
-            background-image: radial-gradient(#334155 1px, transparent 1px);
-        }
-    </style>
+    <link rel="stylesheet" href="main.93hf82.css" />
 </head>
 
 <body id="top"
@@ -173,13 +101,38 @@
                     </a>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
                         <span class="material-icons-outlined">menu</span>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-gray-900/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div
+            class="absolute right-0 top-0 bottom-0 w-64 bg-white dark:bg-card-dark shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-20 px-6 border-l border-gray-100 dark:border-gray-800">
+            <button id="close-menu-btn"
+                class="absolute top-6 right-6 text-gray-500 hover:text-primary transition-colors">
+                <span class="material-icons-outlined text-2xl">close</span>
+            </button>
+            <div class="flex flex-col space-y-6 mt-8">
+                <a class="text-lg font-bold text-secondary dark:text-white" href="index.html#top">Home</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="index.html#services">Services</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="how_we_work.html">How We Work</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="about.html">About</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="contact.html">Contact</a>
+                <div class="pt-6 border-t border-gray-100 dark:border-gray-800">
+                    <a class="flex items-center justify-center w-full bg-primary text-white py-3 rounded-xl font-bold transition-all shadow-md"
+                        href="contact.html">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main id="content-area">
         <!-- Section Header -->
@@ -198,7 +151,7 @@
                             Specialized for Indian Markets
                         </div>
                         <h1
-                            class="text-5xl font-serif tracking-tight text-secondary dark:text-white sm:text-6xl lg:text-7xl leading-[1.1]">
+                            class="text-4xl sm:text-5xl lg:text-7xl font-serif tracking-tight text-secondary dark:text-white leading-[1.1]">
                             Business Setup, <br class="hidden lg:block" />Finance Operations <span
                                 class="text-primary italic font-serif">&</span> Compliance
                         </h1>
@@ -230,10 +183,10 @@
                                 <div
                                     class="backdrop-blur-md bg-white/10 border border-white/20 p-5 rounded-xl shadow-lg">
                                     <div class="flex -space-x-2 mb-3">
-                                        <img alt="Client"
+                                        <img loading="lazy" alt="Client"
                                             class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-700"
                                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" />
-                                        <img alt="Client"
+                                        <img loading="lazy" alt="Client"
                                             class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-700"
                                             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" />
                                     </div>
@@ -675,6 +628,7 @@
                                 this.updateNavLinks();
                                 this.fadeIn();
                                 this.setupPrefetching();
+                                this.initMobileMenu();
                             }, 200);
                         } else { window.location.href = url; }
                     } catch (e) { window.location.href = url; }
@@ -725,6 +679,51 @@
                             link.classList.remove(...ACTIVE_PILL);
                             link.classList.add(...INACTIVE_PILL);
                         }
+                    });
+                },
+                initMobileMenu() {
+                    const btn = document.getElementById('mobile-menu-btn');
+                    const closeBtn = document.getElementById('close-menu-btn');
+                    const menu = document.getElementById('mobile-menu');
+                    const menuPanel = menu ? menu.querySelector('.w-64') : null;
+
+                    if (!btn || !menu || !menuPanel) return;
+
+                    // Prevent duplicate listener attachments on navigation
+                    if (this._menuInitialized) return;
+                    this._menuInitialized = true;
+
+                    const toggleMenu = () => {
+                        const isOpen = !menu.classList.contains('hidden');
+                        if (isOpen) {
+                            menu.classList.remove('opacity-100');
+                            menu.classList.add('opacity-0');
+                            menuPanel.classList.remove('translate-x-0');
+                            menuPanel.classList.add('translate-x-full');
+                            setTimeout(() => menu.classList.add('hidden'), 300);
+                            document.body.style.overflow = '';
+                        } else {
+                            menu.classList.remove('hidden');
+                            // Trigger reflow
+                            void menu.offsetWidth;
+                            menu.classList.remove('opacity-0');
+                            menu.classList.add('opacity-100');
+                            menuPanel.classList.remove('translate-x-full');
+                            menuPanel.classList.add('translate-x-0');
+                            document.body.style.overflow = 'hidden';
+                        }
+                    };
+
+                    btn.addEventListener('click', toggleMenu);
+                    if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+
+                    menu.addEventListener('click', (e) => {
+                        if (e.target === menu) toggleMenu();
+                    });
+
+                    // Close on link click
+                    menu.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', toggleMenu);
                     });
                 },
                 fadeIn() { requestAnimationFrame(() => { document.body.style.opacity = '1'; }); },

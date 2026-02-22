@@ -39,70 +39,7 @@
             },
         };
     </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            opacity: 0;
-        }
-
-        :root {
-            scroll-behavior: smooth;
-        }
-
-        /* Prevent header jitter on scroll */
-        nav {
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            will-change: transform, backdrop-filter;
-        }
-
-        /* Cinematic Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes revealDrift {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 0.4s ease-out forwards;
-        }
-
-        .reveal-on-load {
-            opacity: 0;
-            animation: revealDrift 0.6s ease-out 0.1s forwards;
-        }
-
-        /* Smooth Anchor Landing */
-        section[id] {
-            scroll-margin-top: 100px;
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, rgba(43, 124, 182, 0.05) 0%, rgba(30, 41, 59, 0.05) 100%);
-        }
-    </style>
+    <link rel="stylesheet" href="main.93hf82.css" />
 </head>
 
 <body id="top"
@@ -214,7 +151,7 @@
                         Now</span>
                 </div>
                 <h1
-                    class="text-5xl md:text-6xl lg:text-7xl font-serif tracking-tight text-secondary dark:text-white mb-8">
+                    class="text-4xl sm:text-5xl lg:text-7xl font-serif tracking-tight text-secondary dark:text-white mb-8">
                     Request a <span class="text-primary italic">Strategic Consultation</span>
                 </h1>
                 <p
@@ -655,6 +592,10 @@
                 const menuPanel = menu ? menu.querySelector('.w-64') : null;
 
                 if (!btn || !menu || !menuPanel) return;
+
+                // Prevent duplicate listener attachments on navigation
+                if (this._menuInitialized) return;
+                this._menuInitialized = true;
 
                 const toggleMenu = () => {
                     const isOpen = !menu.classList.contains('hidden');

@@ -55,79 +55,7 @@
             },
         };
     </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            opacity: 0;
-        }
-
-        :root {
-            scroll-behavior: smooth;
-        }
-
-        /* Prevent header jitter on scroll */
-        nav {
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            will-change: transform, backdrop-filter;
-        }
-
-        /* Cinematic Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes revealDrift {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 0.4s ease-out forwards;
-        }
-
-        .reveal-on-load {
-            opacity: 0;
-            animation: revealDrift 0.6s ease-out 0.1s forwards;
-        }
-
-        /* Smooth Anchor Landing */
-        section[id] {
-            scroll-margin-top: 100px;
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, rgba(43, 124, 182, 0.05) 0%, rgba(30, 41, 59, 0.05) 100%);
-        }
-
-        .pattern-bg {
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-
-        .dark .pattern-bg {
-            background-image: radial-gradient(#334155 1px, transparent 1px);
-        }
-    </style>
+    <link rel="stylesheet" href="main.93hf82.css" />
 </head>
 
 <body id="top"
@@ -233,11 +161,12 @@
                         class="inline-block py-1 px-3 rounded-full bg-accent-gold/20 text-accent-gold text-sm font-semibold mb-6 border border-accent-gold/30">
                         India Regulatory & Transaction Support
                     </span>
-                    <h1 class="text-5xl md:text-7xl font-serif text-secondary dark:text-white leading-tight mb-6">
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-secondary dark:text-white leading-tight mb-6">
                         Trusted Financial & Tax Consultancy in Kerala
                     </h1>
                     <p
-                        class="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                        class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
                         Helping businesses stay compliant, confident, and financially secure — without the stress of
                         complex regulations.
                     </p>
@@ -295,7 +224,7 @@
                     <span
                         class="inline-block text-[10px] font-bold tracking-[0.3em] uppercase text-primary bg-primary/10 border border-primary/30 px-4 py-1.5 rounded-full mb-6">Step
                         1 of 1</span>
-                    <h2 class="text-5xl md:text-6xl font-serif text-white mb-5 tracking-tight">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-5 tracking-tight">
                         Choose Your Path
                     </h2>
                     <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light">
@@ -515,7 +444,7 @@
                     <!-- Image / Visual -->
                     <div
                         class="relative rounded-3xl overflow-hidden shadow-2xl reveal-on-load h-full min-h-[400px] md:min-h-[500px]">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80"
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80"
                             alt="Financial analysis and clarity"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
@@ -787,17 +716,17 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <img alt="Financial advisor working"
+                        <img loading="lazy" alt="Financial advisor working"
                             class="rounded-2xl shadow-2xl z-10 relative object-cover h-[600px] w-full border border-gray-200 dark:border-gray-700"
                             src="advisor_photo.jpg" />
                         <div
                             class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl z-20 max-w-sm border border-gray-100 dark:border-gray-700">
                             <div class="flex items-center gap-4 mb-3">
                                 <div class="flex -space-x-2">
-                                    <img alt="Client"
+                                    <img loading="lazy" alt="Client"
                                         class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-700"
                                         src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" />
-                                    <img alt="Client"
+                                    <img loading="lazy" alt="Client"
                                         class="w-10 h-10 rounded-full border-2 border-white dark:border-gray-700"
                                         src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" />
                                 </div>
@@ -830,7 +759,7 @@
                         <span
                             class="material-icons-outlined text-4xl text-accent-gold/20 absolute top-6 right-6">format_quote</span>
                         <div class="flex items-center gap-4 mb-6">
-                            <img alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover"
+                            <img loading="lazy" alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover"
                                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" />
                             <div>
                                 <p class="font-bold text-secondary dark:text-white">Sarah Jenkins</p>
@@ -848,7 +777,7 @@
                         <span
                             class="material-icons-outlined text-4xl text-accent-gold/20 absolute top-6 right-6">format_quote</span>
                         <div class="flex items-center gap-4 mb-6">
-                            <img alt="Rahul Desai" class="w-12 h-12 rounded-full object-cover"
+                            <img loading="lazy" alt="Rahul Desai" class="w-12 h-12 rounded-full object-cover"
                                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" />
                             <div>
                                 <p class="font-bold text-secondary dark:text-white">Rahul Desai</p>
@@ -866,7 +795,7 @@
                         <span
                             class="material-icons-outlined text-4xl text-accent-gold/20 absolute top-6 right-6">format_quote</span>
                         <div class="flex items-center gap-4 mb-6">
-                            <img alt="Marcus von Berg" class="w-12 h-12 rounded-full object-cover"
+                            <img loading="lazy" alt="Marcus von Berg" class="w-12 h-12 rounded-full object-cover"
                                 src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" />
                             <div>
                                 <p class="font-bold text-secondary dark:text-white">Marcus von Berg</p>
@@ -1034,189 +963,7 @@
         </footer>
     </main>
 
-    <script>
-        // --- Liquid Router & SW Engine ---
-        const router = {
-            init() {
-                if ('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('sw.js').catch(() => { });
-                }
-                document.addEventListener('click', e => {
-                    const link = e.target.closest('a');
-                    if (this.shouldHandle(link)) {
-                        e.preventDefault();
-                        this.navigate(link.href);
-                    }
-                });
-                window.addEventListener('popstate', () => this.navigate(window.location.href, false));
-                this.setupPrefetching();
-                this.fadeIn();
-                this.handleHashAction();
-                this.initMobileMenu();
-            },
-            shouldHandle(link) {
-                if (!link || !link.href) return false;
-                const url = new URL(link.href);
-                const isInternal = url.origin === window.location.origin;
-                const href = link.getAttribute('href');
-                const isRelHash = href && href.startsWith('#');
-                return isInternal && !link.hasAttribute('download') && link.target !== '_blank' && !isRelHash;
-            },
-            async navigate(url, addToHistory = true) {
-                const targetUrl = new URL(url);
-                const isSamePage = targetUrl.pathname === window.location.pathname ||
-                    (targetUrl.pathname === '/' && window.location.pathname === '/index.html') ||
-                    (targetUrl.pathname === '/index.html' && window.location.pathname === '/');
-
-                if (isSamePage && targetUrl.hash) {
-                    if (addToHistory) history.pushState(null, '', url);
-                    this.scrollToHash(targetUrl.hash);
-                    return;
-                }
-
-                try {
-                    const response = await fetch(url);
-                    const html = await response.text();
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const newContent = doc.querySelector('#content-area');
-                    const currentContent = document.querySelector('#content-area');
-
-                    if (newContent && currentContent) {
-                        document.body.style.opacity = '0';
-                        setTimeout(() => {
-                            currentContent.innerHTML = newContent.innerHTML;
-                            document.title = doc.title;
-                            if (addToHistory) history.pushState(null, '', url);
-
-                            // Re-execute scripts in the swapped content
-                            currentContent.querySelectorAll('script').forEach(oldScript => {
-                                const newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
-                                newScript.appendChild(document.createTextNode(oldScript.innerHTML));
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
-
-                            if (targetUrl.hash) {
-                                this.scrollToHash(targetUrl.hash);
-                            } else {
-                                window.scrollTo(0, 0);
-                            }
-
-                            this.updateNavLinks();
-                            this.fadeIn();
-                            this.setupPrefetching();
-                            this.initMobileMenu();
-                        }, 200);
-                    } else { window.location.href = url; }
-                } catch (e) { window.location.href = url; }
-            },
-            scrollToHash(hash) {
-                const el = document.querySelector(hash);
-                if (el) {
-                    el.scrollIntoView({ behavior: 'smooth' });
-                } else if (hash === '#top' || hash === '#') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            },
-            handleHashAction() {
-                if (window.location.hash) {
-                    setTimeout(() => this.scrollToHash(window.location.hash), 500);
-                }
-            },
-            updateNavLinks() {
-                const path = window.location.pathname;
-                const page = path.split('/').pop();
-
-                // Main nav links
-                document.querySelectorAll('nav a:not([data-segment])').forEach(link => {
-                    const href = link.getAttribute('href');
-                    if (!href) return;
-                    const isHome = path === '/' || path === '/index.html';
-                    const isMatch = isHome
-                        ? (href === 'index.html#top' || href === 'index.html' || href === '/' || href === '#top')
-                        : (href.includes(page) && !href.includes('#'));
-                    if (isMatch) {
-                        link.classList.add('text-primary', 'font-bold');
-                        link.classList.remove('text-gray-600', 'dark:text-gray-300', 'font-semibold');
-                    } else {
-                        link.classList.remove('text-primary', 'font-bold');
-                        link.classList.add('text-gray-600', 'dark:text-gray-300', 'font-semibold');
-                    }
-                });
-
-                // Segment toggle pills
-                const ACTIVE_PILL = ['bg-white', 'dark:bg-gray-700', 'shadow-sm', 'text-primary', 'dark:text-white'];
-                const INACTIVE_PILL = ['text-gray-600', 'dark:text-gray-300', 'hover:text-primary'];
-                document.querySelectorAll('[data-segment]').forEach(link => {
-                    const seg = link.getAttribute('data-segment');
-                    const isActive = (seg === 'global' && page === 'global_companies.html') ||
-                        (seg === 'indian' && page === 'indian_businesses.html');
-                    if (isActive) {
-                        link.classList.add(...ACTIVE_PILL);
-                        link.classList.remove(...INACTIVE_PILL);
-                    } else {
-                        link.classList.remove(...ACTIVE_PILL);
-                        link.classList.add(...INACTIVE_PILL);
-                    }
-                });
-            },
-            initMobileMenu() {
-                const btn = document.getElementById('mobile-menu-btn');
-                const closeBtn = document.getElementById('close-menu-btn');
-                const menu = document.getElementById('mobile-menu');
-                const menuPanel = menu ? menu.querySelector('.w-64') : null;
-
-                if (!btn || !menu || !menuPanel) return;
-
-                const toggleMenu = () => {
-                    const isOpen = !menu.classList.contains('hidden');
-                    if (isOpen) {
-                        menu.classList.remove('opacity-100');
-                        menu.classList.add('opacity-0');
-                        menuPanel.classList.remove('translate-x-0');
-                        menuPanel.classList.add('translate-x-full');
-                        setTimeout(() => menu.classList.add('hidden'), 300);
-                        document.body.style.overflow = '';
-                    } else {
-                        menu.classList.remove('hidden');
-                        // Trigger reflow
-                        void menu.offsetWidth;
-                        menu.classList.remove('opacity-0');
-                        menu.classList.add('opacity-100');
-                        menuPanel.classList.remove('translate-x-full');
-                        menuPanel.classList.add('translate-x-0');
-                        document.body.style.overflow = 'hidden';
-                    }
-                };
-
-                btn.addEventListener('click', toggleMenu);
-                if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
-
-                menu.addEventListener('click', (e) => {
-                    if (e.target === menu) toggleMenu();
-                });
-
-                // Close on link click
-                menu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', toggleMenu);
-                });
-            },
-            fadeIn() { requestAnimationFrame(() => { document.body.style.opacity = '1'; }); },
-            setupPrefetching() {
-                document.querySelectorAll('a').forEach(link => {
-                    if (this.shouldHandle(link)) {
-                        link.addEventListener('mouseenter', () => {
-                            const p = document.createElement('link');
-                            p.rel = 'prefetch'; p.href = link.href;
-                            document.head.appendChild(p);
-                        }, { once: true });
-                    }
-                });
-            }
-        };
-        router.init();
-    </script>
+    <script src="app.a82jd9.js"></script>
 </body>
 
 </html>
