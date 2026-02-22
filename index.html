@@ -4,7 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>AccoFin Consultancy - Premium Financial Services</title>
+    <title>Trusted Financial & Tax Consultancy in Kerala | AccoFin Consultancy</title>
+    <meta name="description"
+        content="AccoFin Consultancy is a trusted financial and tax consultancy in Kerala, specializing in business setup, finance operations, and compliance for Indian and global companies." />
+    <meta name="keywords"
+        content="Financial Consultancy, Tax Services, Kerala, AccoFin, Accounting, Business Setup, GST Filing" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      "name": "AccoFin Consultancy",
+      "description": "Trusted Financial & Tax Consultancy in Kerala. Ensuring compliance, fostering growth, and providing peace of mind.",
+      "url": "https://www.accofin.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Trivandrum",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -26,7 +45,7 @@
                         "card-dark": "#1E293B",
                         "text-light": "#334155",
                         "text-dark": "#e2e8f0",
-                        "accent-blue-light": "#EAF4FA",
+                        "accent-gold": "#EAF4FA",
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
@@ -162,19 +181,44 @@
                             href="contact.html">Contact</a>
                     </div>
 
-                    <a class="bg-secondary hover:bg-primary dark:bg-white dark:text-secondary dark:hover:bg-primary dark:hover:text-white text-white px-8 py-3 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-sm shrink-0"
+                    <a class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-sm shrink-0"
                         href="contact.html">
                         Schedule Consultation
                     </a>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
                         <span class="material-icons-outlined">menu</span>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-gray-900/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div
+            class="absolute right-0 top-0 bottom-0 w-64 bg-white dark:bg-card-dark shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-20 px-6 border-l border-gray-100 dark:border-gray-800">
+            <button id="close-menu-btn"
+                class="absolute top-6 right-6 text-gray-500 hover:text-primary transition-colors">
+                <span class="material-icons-outlined text-2xl">close</span>
+            </button>
+            <div class="flex flex-col space-y-6 mt-8">
+                <a class="text-lg font-bold text-secondary dark:text-white" href="index.html#top">Home</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="index.html#services">Services</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="how_we_work.html">How We Work</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="about.html">About</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="contact.html">Contact</a>
+                <div class="pt-6 border-t border-gray-100 dark:border-gray-800">
+                    <a class="flex items-center justify-center w-full bg-primary text-white py-3 rounded-xl font-bold transition-all shadow-md"
+                        href="contact.html">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main id="content-area">
         <!-- Hero Section -->
@@ -186,26 +230,25 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                 <div class="max-w-4xl mx-auto">
                     <span
-                        class="inline-block py-1 px-3 rounded-full bg-accent-blue-light dark:bg-blue-900/30 text-primary dark:text-blue-300 text-sm font-semibold mb-6 border border-blue-100 dark:border-blue-800">
+                        class="inline-block py-1 px-3 rounded-full bg-accent-gold/20 text-accent-gold text-sm font-semibold mb-6 border border-accent-gold/30">
                         India Regulatory & Transaction Support
                     </span>
                     <h1 class="text-5xl md:text-7xl font-serif text-secondary dark:text-white leading-tight mb-6">
-                        Compliance Made Clear. <br />
-                        <span class="text-primary italic">Finance Made Simple.</span>
+                        Trusted Financial & Tax Consultancy in Kerala
                     </h1>
                     <p
                         class="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                        Whether you’re expanding into India or scaling within it, we structure your compliance
-                        correctly.
+                        Ensuring compliance, fostering growth, and providing peace of mind. Partner with experts who
+                        structure your success.
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center gap-6 mb-20">
-                        <a class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-xl shadow-lg text-white bg-secondary hover:bg-[#D4AF37] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                        <a class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-xl shadow-lg text-white bg-primary hover:bg-opacity-90 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                             href="contact.html">
-                            Schedule a Discussion
+                            Book a Consultation
                         </a>
-                        <a class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-200 dark:border-gray-700 text-base font-bold rounded-xl text-secondary dark:text-white hover:border-[#D4AF37] hover:text-[#D4AF37] dark:hover:border-[#D4AF37] dark:hover:text-[#D4AF37] transition-all duration-300"
+                        <a class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-base font-bold rounded-xl text-primary hover:bg-primary/5 transition-all duration-300"
                             href="#services">
-                            Explore Our Expertise
+                            Explore Services
                         </a>
                     </div>
 
@@ -225,52 +268,32 @@
                             </div>
 
                             <div class="text-center group">
-                                <div class="mb-3 text-primary">
-                                    <span
-                                        class="material-icons-outlined text-2xl group-hover:scale-110 transition-transform">workspace_premium</span>
-                                </div>
+                                <p class="text-4xl font-serif font-bold text-primary mb-1">
+                                    15+</p>
                                 <p
-                                    class="text-lg font-serif font-bold text-secondary dark:text-white tracking-tight mb-1">
-                                    Founder-Led Advisory</p>
-                                <p
-                                    class="text-[11px] text-gray-500 dark:text-gray-400 font-light uppercase tracking-wider leading-tight">
-                                    Direct guidance from experienced finance professionals.</p>
+                                    class="text-[11px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-wider leading-tight">
+                                    Years of Experience</p>
                             </div>
                             <div class="text-center group">
-                                <div class="mb-3 text-primary">
-                                    <span
-                                        class="material-icons-outlined text-2xl group-hover:scale-110 transition-transform">account_tree</span>
-                                </div>
+                                <p class="text-4xl font-serif font-bold text-primary mb-1">
+                                    500+</p>
                                 <p
-                                    class="text-lg font-serif font-bold text-secondary dark:text-white tracking-tight mb-1">
-                                    Structured Compliance</p>
-                                <p
-                                    class="text-[11px] text-gray-500 dark:text-gray-400 font-light uppercase tracking-wider leading-tight">
-                                    Disciplined systems for accurate and timely filings.</p>
+                                    class="text-[11px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-wider leading-tight">
+                                    Active Clients</p>
                             </div>
                             <div class="text-center group">
-                                <div class="mb-3 text-primary">
-                                    <span
-                                        class="material-icons-outlined text-2xl group-hover:scale-110 transition-transform">speed</span>
-                                </div>
+                                <p class="text-4xl font-serif font-bold text-primary mb-1">
+                                    99%</p>
                                 <p
-                                    class="text-lg font-serif font-bold text-secondary dark:text-white tracking-tight mb-1">
-                                    Process-Driven Execution</p>
-                                <p
-                                    class="text-[11px] text-gray-500 dark:text-gray-400 font-light uppercase tracking-wider leading-tight">
-                                    Clear workflows and transparent communication.</p>
+                                    class="text-[11px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-wider leading-tight">
+                                    Compliance Success</p>
                             </div>
                             <div class="text-center group">
-                                <div class="mb-3 text-primary">
-                                    <span
-                                        class="material-icons-outlined text-2xl group-hover:scale-110 transition-transform">person_search</span>
-                                </div>
+                                <p class="text-4xl font-serif font-bold text-primary mb-1">
+                                    24/7</p>
                                 <p
-                                    class="text-lg font-serif font-bold text-secondary dark:text-white tracking-tight mb-1">
-                                    Dedicated Client Attention</p>
-                                <p
-                                    class="text-[11px] text-gray-500 dark:text-gray-400 font-light uppercase tracking-wider leading-tight">
-                                    Focused support tailored to startups and SMEs.</p>
+                                    class="text-[11px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-wider leading-tight">
+                                    Dedicated Support</p>
                             </div>
                         </div>
                     </div>
@@ -467,60 +490,198 @@
                         Expertise</span>
                     <h2 class="text-4xl md:text-5xl font-serif text-secondary dark:text-white mt-2 tracking-tight">
                         Comprehensive Financial Services</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto font-light">Structure your
+                        growth with our suite of specialized corporate services.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+                    <!-- Service 1 -->
                     <div
-                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D4AF37] dark:hover:border-[#D4AF37] group relative overflow-hidden flex flex-col h-full">
-                        <div
-                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800">
-                            <span
-                                class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">receipt_long</span>
+                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-accent-gold dark:hover:border-accent-gold group relative overflow-hidden flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div
+                                class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800 shrink-0">
+                                <span
+                                    class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">receipt_long</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-secondary dark:text-white">GST & Tax Services
+                            </h3>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-serif font-bold text-secondary dark:text-white mb-4">GST &
-                            Tax
-                            Services</h3>
-                        <p class="text-gray-500 font-light leading-relaxed mb-6">Registration, filing, and ongoing
-                            compliance management for seamless tax operations.</p>
+                        <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-6">
+                            End-to-end registration, filing, and ongoing compliance management designed for accuracy and
+                            seamless tax operations.
+                        </p>
+                        <div class="mb-8">
+                            <p class="text-sm font-bold text-secondary dark:text-white mb-3 uppercase tracking-wider">
+                                Key Benefits:</p>
+                            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    100% On-time filing guarantee</li>
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    Dedicated GST advisory desk</li>
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    Dispute resolution support</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="mb-8 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-100 dark:border-gray-700 text-sm">
+                            <span class="font-bold text-primary block mb-1">Ideal For:</span>
+                            <span class="text-gray-600 dark:text-gray-400">Scaling SMEs and enterprises requiring robust
+                                tax frameworks.</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="contact.html"
+                                class="inline-flex items-center text-primary font-bold hover:text-accent-gold transition-colors group/link">
+                                Discuss Tax Needs
+                                <span
+                                    class="material-icons-outlined ml-2 transition-transform group-hover/link:translate-x-1">arrow_right_alt</span>
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Service 2 -->
                     <div
-                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D4AF37] dark:hover:border-[#D4AF37] group relative overflow-hidden flex flex-col h-full">
-                        <div
-                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800">
-                            <span
-                                class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">domain_add</span>
+                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-accent-gold dark:hover:border-accent-gold group relative overflow-hidden flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div
+                                class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800 shrink-0">
+                                <span
+                                    class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">domain_add</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-secondary dark:text-white">Subsidiary & Reg.
+                            </h3>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-serif font-bold text-secondary dark:text-white mb-4">
-                            Subsidiary
-                            & Reg.</h3>
-                        <p class="text-gray-500 font-light leading-relaxed mb-6">End-to-end support for foreign
-                            subsidiaries, Company, LLP, and Firm incorporation.</p>
+                        <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-6">
+                            Comprehensive support for foreign expanding subsidiaries, plus local Company, LLP, and Firm
+                            incorporations.
+                        </p>
+                        <div class="mb-8">
+                            <p class="text-sm font-bold text-secondary dark:text-white mb-3 uppercase tracking-wider">
+                                Key Benefits:</p>
+                            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    Turnkey incorporation packages</li>
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    Director identification & DSC setup</li>
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    Post-incorporation compliance</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="mb-8 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-100 dark:border-gray-700 text-sm">
+                            <span class="font-bold text-primary block mb-1">Ideal For:</span>
+                            <span class="text-gray-600 dark:text-gray-400">Foreign HQs entering India and new domestic
+                                ventures.</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="contact.html"
+                                class="inline-flex items-center text-primary font-bold hover:text-accent-gold transition-colors group/link">
+                                Start Incorporation
+                                <span
+                                    class="material-icons-outlined ml-2 transition-transform group-hover/link:translate-x-1">arrow_right_alt</span>
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Service 3 -->
                     <div
-                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D4AF37] dark:hover:border-[#D4AF37] group relative overflow-hidden flex flex-col h-full">
-                        <div
-                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800">
-                            <span
-                                class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">library_books</span>
+                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-accent-gold dark:hover:border-accent-gold group relative overflow-hidden flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div
+                                class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800 shrink-0">
+                                <span
+                                    class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">library_books</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-secondary dark:text-white">Bookkeeping & MIS
+                            </h3>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-serif font-bold text-secondary dark:text-white mb-4">
-                            Bookkeeping
-                            & MIS</h3>
-                        <p class="text-gray-500 font-light leading-relaxed mb-6">Accurate financial record-keeping and
-                            robust management reporting structures.</p>
+                        <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-6">
+                            Accurate financial record-keeping, payroll management, and robust monthly management
+                            reporting structures (MIS).
+                        </p>
+                        <div class="mb-8">
+                            <p class="text-sm font-bold text-secondary dark:text-white mb-3 uppercase tracking-wider">
+                                Key Benefits:</p>
+                            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    Cloud-based securely hosted ledgers</li>
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    Custom dashboard reporting</li>
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    Audit-ready financials at all times</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="mb-8 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-100 dark:border-gray-700 text-sm">
+                            <span class="font-bold text-primary block mb-1">Ideal For:</span>
+                            <span class="text-gray-600 dark:text-gray-400">Companies seeking outsourced CFO-level
+                                fractional support.</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="contact.html"
+                                class="inline-flex items-center text-primary font-bold hover:text-accent-gold transition-colors group/link">
+                                Upgrade Bookkeeping
+                                <span
+                                    class="material-icons-outlined ml-2 transition-transform group-hover/link:translate-x-1">arrow_right_alt</span>
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Service 4 -->
                     <div
-                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D4AF37] dark:hover:border-[#D4AF37] group relative overflow-hidden flex flex-col h-full">
-                        <div
-                            class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800">
-                            <span
-                                class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">gavel</span>
+                        class="bg-white dark:bg-card-dark p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-accent-gold dark:hover:border-accent-gold group relative overflow-hidden flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div
+                                class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-primary transition-colors border border-blue-100 dark:border-blue-800 shrink-0">
+                                <span
+                                    class="material-icons-outlined text-primary group-hover:text-white dark:text-blue-300 text-2xl">gavel</span>
+                            </div>
+                            <h3 class="text-2xl font-serif font-bold text-secondary dark:text-white">FEMA & Labour</h3>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-serif font-bold text-secondary dark:text-white mb-4">FEMA &
-                            Labour</h3>
-                        <p class="text-gray-500 font-light leading-relaxed mb-6">Compliance with Foreign Exchange
-                            Management
-                            Act and intricate Indian labor laws.</p>
+                        <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-6">
+                            Expert guidance on navigating the Foreign Exchange Management Act and intricate Indian labor
+                            laws.
+                        </p>
+                        <div class="mb-8">
+                            <p class="text-sm font-bold text-secondary dark:text-white mb-3 uppercase tracking-wider">
+                                Key Benefits:</p>
+                            <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    RBI filing & FDI compliance</li>
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    PF, ESI, and local shop act setups</li>
+                                <li class="flex items-start gap-2"><span
+                                        class="material-icons-outlined text-accent-gold text-lg shrink-0">check</span>
+                                    Legal risk mitigation strategies</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="mb-8 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border border-gray-100 dark:border-gray-700 text-sm">
+                            <span class="font-bold text-primary block mb-1">Ideal For:</span>
+                            <span class="text-gray-600 dark:text-gray-400">Entities receiving foreign investments or
+                                running large workforces.</span>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="contact.html"
+                                class="inline-flex items-center text-primary font-bold hover:text-accent-gold transition-colors group/link">
+                                Ensure Compliance
+                                <span
+                                    class="material-icons-outlined ml-2 transition-transform group-hover/link:translate-x-1">arrow_right_alt</span>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -543,7 +704,7 @@
                             <div
                                 class="flex gap-4 p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700">
                                 <div
-                                    class="flex-shrink-0 w-12 h-12 rounded-lg bg-accent-blue-light dark:bg-blue-900/30 flex items-center justify-center">
+                                    class="flex-shrink-0 w-12 h-12 rounded-lg bg-accent-gold dark:bg-blue-900/30 flex items-center justify-center">
                                     <span class="material-icons-outlined text-primary">verified_user</span>
                                 </div>
                                 <div>
@@ -556,7 +717,7 @@
                             <div
                                 class="flex gap-4 p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700">
                                 <div
-                                    class="flex-shrink-0 w-12 h-12 rounded-lg bg-accent-blue-light dark:bg-blue-900/30 flex items-center justify-center">
+                                    class="flex-shrink-0 w-12 h-12 rounded-lg bg-accent-gold dark:bg-blue-900/30 flex items-center justify-center">
                                     <span class="material-icons-outlined text-primary">security</span>
                                 </div>
                                 <div>
@@ -570,7 +731,7 @@
                             <div
                                 class="flex gap-4 p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700">
                                 <div
-                                    class="flex-shrink-0 w-12 h-12 rounded-lg bg-accent-blue-light dark:bg-blue-900/30 flex items-center justify-center">
+                                    class="flex-shrink-0 w-12 h-12 rounded-lg bg-accent-gold dark:bg-blue-900/30 flex items-center justify-center">
                                     <span class="material-icons-outlined text-primary">speed</span>
                                 </div>
                                 <div>
@@ -606,6 +767,103 @@
                                 India entry seamless. Their understanding of FEMA regulations was impressive."</p>
                         </div>
                         <div class="absolute top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl z-0"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-24 bg-white dark:bg-card-dark relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-bold tracking-widest uppercase text-xs mb-4 inline-block">Client
+                        Success</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-secondary dark:text-white mt-2 tracking-tight">
+                        Trusted by Leaders</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div
+                        class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm relative">
+                        <span
+                            class="material-icons-outlined text-4xl text-accent-gold/20 absolute top-6 right-6">format_quote</span>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover"
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" />
+                            <div>
+                                <p class="font-bold text-secondary dark:text-white">Sarah Jenkins</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider">CFO, TechGlobal Inc.</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 font-light italic leading-relaxed">
+                            "Accofin made our India entry seamless. Their understanding of FEMA regulations and
+                            proactive tax structuring saved us months of potential delays."
+                        </p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div
+                        class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm relative">
+                        <span
+                            class="material-icons-outlined text-4xl text-accent-gold/20 absolute top-6 right-6">format_quote</span>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img alt="Rahul Desai" class="w-12 h-12 rounded-full object-cover"
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80" />
+                            <div>
+                                <p class="font-bold text-secondary dark:text-white">Rahul Desai</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider">Founder, BuildScale India</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 font-light italic leading-relaxed">
+                            "We transitioned our entire accounting and compliance to them. Reliable, exact, and always
+                            available for strategic founder-level discussions."
+                        </p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div
+                        class="p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm relative">
+                        <span
+                            class="material-icons-outlined text-4xl text-accent-gold/20 absolute top-6 right-6">format_quote</span>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div
+                                class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                M</div>
+                            <div>
+                                <p class="font-bold text-secondary dark:text-white">Marcus von Berg</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider">Director, European Logistics
+                                    Supply</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 font-light italic leading-relaxed">
+                            "The structured execution they bring is remarkable. The Zero-Trust data security framework
+                            gave our board the confidence to expand operations."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Trust Badges -->
+        <section class="py-12 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-card-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Registered &
+                    Compliant With</p>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="flex items-center gap-2">
+                        <span class="material-icons-outlined text-primary text-3xl">account_balance</span>
+                        <span class="font-bold text-secondary dark:text-white uppercase">ICAI</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-icons-outlined text-primary text-3xl">assured_workload</span>
+                        <span class="font-bold text-secondary dark:text-white uppercase">MCA India</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-icons-outlined text-primary text-3xl">local_police</span>
+                        <span class="font-bold text-secondary dark:text-white uppercase">ISO 27001</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-icons-outlined text-primary text-3xl">assignment_turned_in</span>
+                        <span class="font-bold text-secondary dark:text-white uppercase">GST Network</span>
                     </div>
                 </div>
             </div>
@@ -701,6 +959,23 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Trust & Registrations -->
+                <div class="mt-12 flex flex-wrap justify-center lg:justify-start gap-6 opacity-60">
+                    <div class="flex items-center gap-2">
+                        <span class="material-icons-outlined text-sm">account_balance</span>
+                        <span class="text-xs font-bold uppercase tracking-wider">ICAI Registered</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-icons-outlined text-sm">assured_workload</span>
+                        <span class="text-xs font-bold uppercase tracking-wider">MCA Regulated</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-icons-outlined text-sm">verified</span>
+                        <span class="text-xs font-bold uppercase tracking-wider">ISO 27001 Certified</span>
+                    </div>
+                </div>
+
                 <div
                     class="mt-16 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p class="text-gray-500 text-xs">
@@ -736,6 +1011,7 @@
                 this.setupPrefetching();
                 this.fadeIn();
                 this.handleHashAction();
+                this.initMobileMenu();
             },
             shouldHandle(link) {
                 if (!link || !link.href) return false;
@@ -789,6 +1065,7 @@
                             this.updateNavLinks();
                             this.fadeIn();
                             this.setupPrefetching();
+                            this.initMobileMenu();
                         }, 200);
                     } else { window.location.href = url; }
                 } catch (e) { window.location.href = url; }
@@ -841,6 +1118,47 @@
                         link.classList.remove(...ACTIVE_PILL);
                         link.classList.add(...INACTIVE_PILL);
                     }
+                });
+            },
+            initMobileMenu() {
+                const btn = document.getElementById('mobile-menu-btn');
+                const closeBtn = document.getElementById('close-menu-btn');
+                const menu = document.getElementById('mobile-menu');
+                const menuPanel = menu ? menu.querySelector('.w-64') : null;
+
+                if (!btn || !menu || !menuPanel) return;
+
+                const toggleMenu = () => {
+                    const isOpen = !menu.classList.contains('hidden');
+                    if (isOpen) {
+                        menu.classList.remove('opacity-100');
+                        menu.classList.add('opacity-0');
+                        menuPanel.classList.remove('translate-x-0');
+                        menuPanel.classList.add('translate-x-full');
+                        setTimeout(() => menu.classList.add('hidden'), 300);
+                        document.body.style.overflow = '';
+                    } else {
+                        menu.classList.remove('hidden');
+                        // Trigger reflow
+                        void menu.offsetWidth;
+                        menu.classList.remove('opacity-0');
+                        menu.classList.add('opacity-100');
+                        menuPanel.classList.remove('translate-x-full');
+                        menuPanel.classList.add('translate-x-0');
+                        document.body.style.overflow = 'hidden';
+                    }
+                };
+
+                btn.addEventListener('click', toggleMenu);
+                if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+
+                menu.addEventListener('click', (e) => {
+                    if (e.target === menu) toggleMenu();
+                });
+
+                // Close on link click
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', toggleMenu);
                 });
             },
             fadeIn() { requestAnimationFrame(() => { document.body.style.opacity = '1'; }); },

@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>How We Work - AccoFin Consultancy</title>
+    <title>How We Work | AccoFin Consultancy</title>
+    <meta name="description"
+        content="Discover AccoFin Consultancy's rigorous operating system for financial compliance, featuring transparent workflows, strict data governance, and proactive support." />
+    <meta name="keywords" content="Financial Compliance Workflow, AccoFin Process, Corporate Governance India" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -26,7 +29,7 @@
                         "card-dark": "#1E293B",
                         "text-light": "#334155",
                         "text-dark": "#e2e8f0",
-                        "accent-blue-light": "#EAF4FA",
+                        "accent-gold": "#EAF4FA",
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
@@ -162,19 +165,44 @@
                             href="contact.html">Contact</a>
                     </div>
 
-                    <a class="bg-secondary hover:bg-primary dark:bg-white dark:text-secondary dark:hover:bg-primary dark:hover:text-white text-white px-8 py-3 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-sm shrink-0"
+                    <a class="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-sm shrink-0"
                         href="contact.html">
                         Schedule Consultation
                     </a>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
                         <span class="material-icons-outlined">menu</span>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-gray-900/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div
+            class="absolute right-0 top-0 bottom-0 w-64 bg-white dark:bg-card-dark shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col pt-20 px-6 border-l border-gray-100 dark:border-gray-800">
+            <button id="close-menu-btn"
+                class="absolute top-6 right-6 text-gray-500 hover:text-primary transition-colors">
+                <span class="material-icons-outlined text-2xl">close</span>
+            </button>
+            <div class="flex flex-col space-y-6 mt-8">
+                <a class="text-lg font-bold text-secondary dark:text-white" href="index.html#top">Home</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="index.html#services">Services</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="how_we_work.html">How We Work</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="about.html">About</a>
+                <a class="text-lg font-bold text-secondary dark:text-white" href="contact.html">Contact</a>
+                <div class="pt-6 border-t border-gray-100 dark:border-gray-800">
+                    <a class="flex items-center justify-center w-full bg-primary text-white py-3 rounded-xl font-bold transition-all shadow-md"
+                        href="contact.html">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main id="content-area">
         <!-- Section Header -->
@@ -620,6 +648,23 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Trust & Registrations -->
+            <div class="mt-12 flex flex-wrap justify-center lg:justify-start gap-6 opacity-60">
+                <div class="flex items-center gap-2">
+                    <span class="material-icons-outlined text-sm">account_balance</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">ICAI Registered</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-icons-outlined text-sm">assured_workload</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">MCA Regulated</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-icons-outlined text-sm">verified</span>
+                    <span class="text-xs font-bold uppercase tracking-wider">ISO 27001 Certified</span>
+                </div>
+            </div>
+
             <div
                 class="mt-16 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-6">
                 <p class="text-gray-500 text-xs">
@@ -652,6 +697,7 @@
                 this.setupPrefetching();
                 this.fadeIn();
                 this.handleHashAction();
+                this.initMobileMenu();
             },
             shouldHandle(link) {
                 if (!link || !link.href) return false;
@@ -705,6 +751,7 @@
                             this.updateNavLinks();
                             this.fadeIn();
                             this.setupPrefetching();
+                            this.initMobileMenu();
                         }, 200);
                     } else { window.location.href = url; }
                 } catch (e) { window.location.href = url; }
@@ -755,6 +802,47 @@
                         link.classList.remove(...ACTIVE_PILL);
                         link.classList.add(...INACTIVE_PILL);
                     }
+                });
+            },
+            initMobileMenu() {
+                const btn = document.getElementById('mobile-menu-btn');
+                const closeBtn = document.getElementById('close-menu-btn');
+                const menu = document.getElementById('mobile-menu');
+                const menuPanel = menu ? menu.querySelector('.w-64') : null;
+
+                if (!btn || !menu || !menuPanel) return;
+
+                const toggleMenu = () => {
+                    const isOpen = !menu.classList.contains('hidden');
+                    if (isOpen) {
+                        menu.classList.remove('opacity-100');
+                        menu.classList.add('opacity-0');
+                        menuPanel.classList.remove('translate-x-0');
+                        menuPanel.classList.add('translate-x-full');
+                        setTimeout(() => menu.classList.add('hidden'), 300);
+                        document.body.style.overflow = '';
+                    } else {
+                        menu.classList.remove('hidden');
+                        // Trigger reflow
+                        void menu.offsetWidth;
+                        menu.classList.remove('opacity-0');
+                        menu.classList.add('opacity-100');
+                        menuPanel.classList.remove('translate-x-full');
+                        menuPanel.classList.add('translate-x-0');
+                        document.body.style.overflow = 'hidden';
+                    }
+                };
+
+                btn.addEventListener('click', toggleMenu);
+                if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+
+                menu.addEventListener('click', (e) => {
+                    if (e.target === menu) toggleMenu();
+                });
+
+                // Close on link click
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', toggleMenu);
                 });
             },
             fadeIn() { requestAnimationFrame(() => { document.body.style.opacity = '1'; }); },
