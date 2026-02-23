@@ -14,7 +14,7 @@ tailwind.config = {
                 "accent-gold": "#B3902A",
             },
             fontFamily: {
-                serif: ['"Playfair Display"', 'serif'],
+                serif: ['"Lora"', 'serif'],
                 sans: ['"Google Sans Flex"', 'sans-serif'],
             },
         },
