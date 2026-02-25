@@ -1,0 +1,178 @@
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+body {
+    opacity: 0;
+    overflow-x: hidden;
+}
+
+:root {
+    scroll-behavior: smooth;
+    --brand-blue: #2B7CB6;
+}
+
+/* Prevent header jitter on scroll */
+nav {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform, backdrop-filter;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), backdrop-filter 0.4s ease;
+}
+
+/* Hardware acceleration for smooth components */
+.path-card,
+.glass-jewel,
+button,
+a {
+    transform: translateZ(0);
+}
+
+/* UI Typography Fixes */
+.amp {
+    font-style: italic;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    color: inherit;
+}
+
+.title-italic {
+    font-style: italic;
+}
+
+/* Cinematic Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes revealDrift {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.reveal-on-load {
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: revealDrift 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Premium Hero Animations */
+@keyframes gridDrift {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+.animate-grid-drift {
+    animation: gridDrift 20s linear infinite;
+}
+
+@keyframes goldPulsePremium {
+
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+}
+
+.animate-gold-pulse-premium {
+    animation: goldPulsePremium 10s ease-in-out infinite;
+}
+
+
+/* Smooth Anchor Landing */
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, rgba(43, 124, 182, 0.05) 0%, rgba(30, 41, 59, 0.05) 100%);
+}
+
+.pattern-bg {
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.dark .pattern-bg {
+    background-image: radial-gradient(#334155 1px, transparent 1px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0A0A0A;
+}
+
+.title-black {
+    color: #0A0A0A;
+}
+
+.title-blue {
+    color: var(--brand-blue);
+}
+
+/* Kill browser blue on anchor-wrapped headings */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+a h1,
+a h2,
+a h3,
+a h4 {
+    color: inherit;
+    text-decoration: none;
+}
