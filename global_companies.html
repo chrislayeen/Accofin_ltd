@@ -24,7 +24,30 @@
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Google+Sans+Flex:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script src="tailwind.config.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2B7CB6",
+                        secondary: "#1E293B",
+                        "navy-dark": "#0F172A",
+                        "background-light": "#F8F9FB",
+                        "background-dark": "#0F172A",
+                        "card-dark": "#1E293B",
+                        "text-light": "#334155",
+                        "text-dark": "#e2e8f0",
+                        "accent-gold": "#B3902A",
+                    },
+                    fontFamily: {
+                        serif: ['"Lora"', 'serif'],
+                        sans: ['"Google Sans Flex"', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
 
     <link rel="stylesheet" href="main.93hf82.css" />
 </head>
@@ -173,8 +196,8 @@
                     <div class="relative mt-8 lg:mt-0">
                         <div
                             class="rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group border-4 border-white dark:border-gray-700 ring-1 ring-gray-200 dark:ring-gray-700">
-                            <img loading="lazy" src="assets/images/global-finance-hero.jpg"
-                                alt="Global financial district skyline"
+                            <img loading="lazy" src="assets/images/finance-compliance-stylelock.png"
+                                alt="3D precision grid symbolizing financial compliance and accuracy"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                         </div>
                         <!-- Floating KPI card -->
@@ -735,98 +758,7 @@
             </div>
         </section>
 
-        <footer class="bg-secondary dark:bg-navy-dark text-white py-16 md:py-24 border-t border-gray-800">
-            <div class="max-w-[1600px] mx-auto px-6 lg:px-12">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-                    <!-- Brand -->
-                    <div class="space-y-6">
-                        <img src="logo.webp" alt="AccoFin Logo" class="h-12 w-auto brightness-0 invert" />
-                        <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-                            Premier advisory for complex cross-border financial operations. Bridging global
-                            excellence with Indian market depth.
-                        </p>
-                    </div>
-                    <!-- Strategic Links -->
-                    <div>
-                        <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest title-blue">
-                            Capabilities</h4>
-                        <ul class="space-y-4 text-gray-400 text-sm">
-                            <li><a href="global_companies.html" class="hover:text-primary transition">Global FDI
-                                    & Entry</a></li>
-                            <li><a href="indian_businesses.html" class="hover:text-primary transition">Capital
-                                    Raising</a></li>
-                            <li><a href="how_we_work.html" class="hover:text-primary transition">Performance
-                                    Strategy</a></li>
-                            <li><a href="about.html" class="hover:text-primary transition">Leadership
-                                    Advisory</a></li>
-                        </ul>
-                    </div>
-                    <!-- Support -->
-                    <div>
-                        <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest title-blue">
-                            Intelligence</h4>
-                        <ul class="space-y-4 text-gray-400 text-sm">
-                            <li><a href="contact.html" class="hover:text-primary transition">Client Portal</a>
-                            </li>
-                            <li><a href="coming-soon.html" class="hover:text-primary transition">Compliance Updates</a>
-                            </li>
-                            <li><a href="coming-soon.html" class="hover:text-primary transition">Sector Insights</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Global Presence -->
-                    <div>
-                        <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest title-blue">
-                            Connect</h4>
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition">
-                                <!-- @license lucide-static v0.575.0 - ISC -->
-                                <svg class="text-primary text-lg w-6 h-6" aria-hidden="true"
-                                    class="lucide lucide-map-pin" xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
-
-                                <span>Headquartered in Trivandrum, Kerala &middot; Pan-India Services</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition">
-                                <!-- @license lucide-static v0.575.0 - ISC -->
-                                <svg class="text-primary text-lg w-6 h-6" aria-hidden="true" class="lucide lucide-globe"
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                                    <path d="M2 12h20" />
-                                </svg>
-
-                                <span>Global Network</span>
-                            </div>
-                            <a href="contact.html"
-                                class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-xs font-bold hover:bg-blue-600 transition shadow-lg shadow-primary/20">
-                                Book Strategic Briefing
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div
-                    class="mt-16 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p class="text-gray-500 text-xs">
-                        © 2026 AccoFin Consultancy. All rights reserved. Strategic excellence for the global
-                        economy.
-                    </p>
-                    <a href="index.html#top" class="text-gray-500 hover:text-primary transition text-xs">Privacy
-                        Policy</a>
-                    <a href="index.html#top" class="text-gray-500 hover:text-primary transition text-xs">Terms
-                        of Service</a>
-                </div>
-            </div>
-        </footer>
+        
 
         <script>
             const router = {

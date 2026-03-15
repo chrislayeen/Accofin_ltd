@@ -24,9 +24,32 @@
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Google+Sans+Flex:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script src="tailwind.config.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2B7CB6",
+                        secondary: "#1E293B",
+                        "navy-dark": "#0F172A",
+                        "background-light": "#F8F9FB",
+                        "background-dark": "#0F172A",
+                        "card-dark": "#1E293B",
+                        "text-light": "#334155",
+                        "text-dark": "#e2e8f0",
+                        "accent-gold": "#B3902A",
+                    },
+                    fontFamily: {
+                        serif: ['"Lora"', 'serif'],
+                        sans: ['"Google Sans Flex"', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
 
-    <link rel="stylesheet" href="/src/main.css" />
+    <link rel="stylesheet" href="main.93hf82.css" />
 </head>
 
 <body id="top"
@@ -171,10 +194,7 @@
                         <div
                             class="relative overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 shadow-2xl border-4 border-white dark:border-gray-700 aspect-[4/5] sm:aspect-[4/3] group ring-1 ring-gray-200 dark:ring-gray-700">
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
-                                style="background-image: url('indian-corporate-meeting.jpg');">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent">
+                                style="background-image: url('assets/images/business-setup-stylelock.png');">
                             </div>
                             <div class="absolute bottom-6 left-6 right-6">
                                 <div
@@ -214,7 +234,7 @@
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-3.03 2.496c-.384.317-.626.74-.766 1.208m-2.15-5.346aM2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                                    d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-3.03 2.496c-.384.317-.626.74-.766 1.208m-2.15-5.346a1.2 1.2 0 111.444-1.444A1.2 1.2 0 0111.42 15.17zM2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
                             </svg>
                         </div>
                         <h3
@@ -571,91 +591,6 @@
                 </div>
             </div>
         </section>
-        <footer class="bg-secondary dark:bg-navy-dark text-white py-16 md:py-24 border-t border-gray-800">
-            <div class="max-w-[1600px] mx-auto px-6 lg:px-12">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-                    <!-- Brand -->
-                    <div class="space-y-6">
-                        <img src="logo.webp" alt="AccoFin Logo" class="h-12 w-auto brightness-0 invert" />
-                        <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-                            Premier advisory for complex cross-border financial operations. Bridging global excellence
-                            with Indian market depth.
-                        </p>
-                    </div>
-                    <!-- Strategic Links -->
-                    <div>
-                        <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest title-blue">
-                            Capabilities</h4>
-                        <ul class="space-y-4 text-gray-400 text-sm">
-                            <li><a href="global_companies.html" class="hover:text-primary transition">Global FDI &
-                                    Entry</a></li>
-                            <li><a href="indian_businesses.html" class="hover:text-primary transition">Capital
-                                    Raising</a></li>
-                            <li><a href="how_we_work.html" class="hover:text-primary transition">Performance
-                                    Strategy</a></li>
-                            <li><a href="about.html" class="hover:text-primary transition">Leadership Advisory</a></li>
-                        </ul>
-                    </div>
-                    <!-- Support -->
-                    <div>
-                        <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest title-blue">
-                            Intelligence</h4>
-                        <ul class="space-y-4 text-gray-400 text-sm">
-                            <li><a href="contact.html" class="hover:text-primary transition">Client Portal</a></li>
-                            <li><a href="coming-soon.html" class="hover:text-primary transition">Compliance Updates</a>
-                            </li>
-                            <li><a href="coming-soon.html" class="hover:text-primary transition">Sector Insights</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Global Presence -->
-                    <div>
-                        <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest title-blue">Connect
-                        </h4>
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition">
-                                <svg class="text-primary text-lg w-6 h-6" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                </svg>
-                                <span>Headquartered in Trivandrum, Kerala &middot; Pan-India Services</span>
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition">
-                                <svg class="text-primary text-lg w-6 h-6" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-                                </svg>
-                                <span>Global Network</span>
-                            </div>
-                            <a href="contact.html"
-                                class="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-xs font-bold hover:bg-blue-600 transition shadow-lg shadow-primary/20">
-                                Book Strategic Briefing
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div
-                    class="mt-16 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p class="text-gray-500 text-xs">
-                        © 2026 AccoFin Consultancy. All rights reserved. Strategic excellence for the global economy.
-                    </p>
-                    <div class="flex gap-8">
-                        <a href="privacy.html" class="text-gray-500 hover:text-primary transition text-xs">Privacy
-                            Policy</a>
-                        <a href="terms.html" class="text-gray-500 hover:text-primary transition text-xs">Terms of
-                            Service</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
         <script>
             const router = {

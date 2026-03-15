@@ -40,9 +40,61 @@
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Google+Sans+Flex:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script src="tailwind.config.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2B7CB6",
+                        secondary: "#1E293B",
+                        "navy-dark": "#0F172A",
+                        "background-light": "#F8F9FB",
+                        "background-dark": "#0F172A",
+                        "card-dark":        "#1E293B",
+                        "text-light":       "#334155",
+                        "text-dark":        "#e2e8f0",
+                        "accent-gold":      "#B3902A",
+                    },
+                    fontFamily: {
+                        serif: ['"Lora"', 'serif'],
+                        sans:  ['"Google Sans Flex"', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
 
+    <style>
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+        }
+        @keyframes goldPulsePremium {
+            0%, 100% { opacity: 0.12; transform: scale(1); filter: blur(120px); }
+            50% { opacity: 0.22; transform: scale(1.1); filter: blur(140px); }
+        }
+        @keyframes gridDrift {
+            0% { background-position: 0 0; }
+            100% { background-position: 40px 40px; }
+        }
+        .animate-grid-drift {
+            animation: gridDrift 20s linear infinite;
+        }
+        .animate-gold-pulse-premium {
+            animation: goldPulsePremium 10s ease-in-out infinite;
+        }
+        .hero-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .dark .hero-glass {
+            background: rgba(15, 23, 42, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
     <link rel="stylesheet" href="main.93hf82.css" />
 </head>
 
@@ -146,95 +198,141 @@
     </div>
 
     <main id="content-area">
-        <!-- Hero Section -->
-        <header
-            class="relative pt-20 pb-20 md:pt-32 md:pb-32 overflow-hidden reveal-on-load bg-white dark:bg-navy-dark border-b border-gray-100 dark:border-gray-800">
-            <!-- Minimal Pattern Background -->
-            <div class="absolute inset-0 pattern-bg opacity-30 pointer-events-none animate-grid-drift"></div>
+        <!-- Hero Section — World-Class "Glass Monolith" Design -->
+        <header class="relative overflow-hidden bg-white dark:bg-[#080f1e] border-b border-gray-100/80 dark:border-white/5" style="min-height: clamp(700px, 95vh, 1000px);">
 
-            <!-- Soft Ambient Glows (Subtle Gold Pulse) -->
-            <div
-                class="absolute top-1/3 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-accent-gold/15 dark:bg-accent-gold/10 rounded-full blur-[100px] pointer-events-none z-0 animate-gold-pulse-premium">
+            <!-- === BACKGROUND LAYER === -->
+            <div class="absolute inset-0 pointer-events-none select-none">
+                <!-- Subtle dot grid -->
+                <div class="absolute inset-0 pattern-bg opacity-25 dark:opacity-10 animate-grid-drift"></div>
+                <!-- Deep blue gradient wash -->
+                <div class="absolute inset-0 bg-gradient-to-br from-transparent via-blue-50/40 to-sky-100/30 dark:from-[#080f1e] dark:via-[#0d1a35] dark:to-[#091528]"></div>
+                <!-- Primary glow top-left -->
+                <div class="absolute -top-48 -left-48 w-[800px] h-[800px] bg-primary/10 dark:bg-primary/15 rounded-full blur-[120px] animate-gold-pulse-premium"></div>
+                <!-- Accent glow bottom-right -->
+                <div class="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-amber-400/8 dark:bg-amber-500/8 rounded-full blur-[100px]" style="animation: goldPulsePremium 14s 2s ease-in-out infinite;"></div>
             </div>
 
-            <div
-                class="absolute -top-40 -left-40 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none">
-            </div>
-            <div
-                class="absolute top-20 -right-20 w-80 h-80 bg-blue-100/50 dark:bg-blue-900/20 rounded-full blur-[80px] pointer-events-none">
-            </div>
+            <!-- === MAIN GRID === -->
+            <div class="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 h-full flex items-center" style="padding-top: clamp(100px, 15vh, 180px); padding-bottom: clamp(100px, 15vh, 180px);">
+                <div class="grid lg:grid-cols-12 gap-16 xl:gap-24 items-center w-full">
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <div class="max-w-4xl mx-auto">
-                    <!-- Elegant Pill -->
-                    <span
-                        class="inline-block py-1.5 px-5 rounded-full bg-primary/5 dark:bg-primary/10 border border-primary/20 text-primary text-[10px] sm:text-xs font-bold mb-6 uppercase tracking-[0.2em] shadow-sm">
-                        India Regulatory <span class="amp">&amp;</span> Transaction Support
-                    </span>
-
-                    <!-- Premium Typography -->
-                    <h1
-                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.15] mb-6 tracking-tight">
-                        <span class="text-text-light dark:text-gray-300">Trusted Financial <span
-                                class="amp">&amp;</span> Tax</span> <br /><span class="text-primary italic">Consultancy
-                            in Kerala</span>
-                    </h1>
-                    <p
-                        class="text-base sm:text-xl text-gray-500 dark:text-gray-400 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                        Helping businesses stay compliant, confident, and financially secure — without the stress of
-                        complex regulations.
-                    </p>
-
-                    <!-- Sleek CTAs -->
-                    <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-12">
-                        <a class="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-sm font-bold rounded-xl shadow-lg shadow-primary/20 text-white bg-primary hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1"
-                            href="contact.html">
-                            Secure Your Consultation
-                        </a>
-                        <a class="inline-flex items-center justify-center px-8 py-3.5 border border-gray-200 dark:border-white/20 text-sm font-bold rounded-xl text-secondary dark:text-white bg-white dark:bg-white/5 hover:bg-gray-50 dark:hover:bg-white/10 shadow-sm transition-all duration-300"
-                            href="#services">
-                            Build Financial Confidence
-                        </a>
-                    </div>
-
-                    <!-- Refined Trust Metrics -->
-                    <div
-                        class="flex flex-wrap justify-center items-center gap-6 md:gap-12 mt-8 opacity-90 border-t border-gray-100 dark:border-white/10 pt-8 inline-block mx-auto">
-                        <div class="flex items-center gap-3">
-                            <svg class="text-primary text-xl w-6 h-6" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
-                            </svg>
-                            <span class="text-sm font-semibold text-secondary dark:text-gray-300 tracking-wide">5+
-                                Years Experience</span>
+                    <!-- ── LEFT COLUMN: Premium Copy (5 cols) ── -->
+                    <div class="lg:col-span-5 reveal-on-load">
+                        <!-- Luxury Eyebrow -->
+                        <div class="inline-flex items-center gap-3 py-2 px-5 rounded-full border border-primary/20 bg-primary/5 dark:bg-primary/10 mb-8 shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            <span class="text-primary text-[11px] font-bold uppercase tracking-[0.3em]">Mastering Complexity</span>
                         </div>
-                        <div class="hidden md:block w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></div>
-                        <div class="flex items-center gap-3">
-                            <svg class="text-primary text-xl w-6 h-6" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                            </svg>
-                            <span class="text-sm font-semibold text-secondary dark:text-gray-300 tracking-wide">500+
-                                Active Clients</span>
+
+                        <!-- Cinematic Headline -->
+                        <h1 class="font-serif tracking-tight leading-[1.05] mb-8" style="font-size: clamp(2.8rem, 6vw, 4.8rem);">
+                            <span class="block text-gray-900 dark:text-gray-50 mb-1">Engineering</span>
+                            <span class="block text-gray-900 dark:text-gray-50 italic opacity-90">Financial</span>
+                            <span class="block text-primary">Sovereignty.</span>
+                        </h1>
+
+                        <!-- Sophisticated Subheadline -->
+                        <p class="text-lg sm:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-lg font-light leading-relaxed">
+                            Elite fiscal architectural and compliance frameworks designed for global visionaries. We transform Indian regulatory density into your strategic growth vector.
+                        </p>
+
+                        <!-- Luxury CTAs -->
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
+                            <a href="contact.html" class="group relative inline-flex items-center justify-center gap-3 px-8 py-5 rounded-xl font-bold text-sm text-white bg-secondary dark:bg-primary transition-all duration-500 shadow-2xl hover:-translate-y-1 overflow-hidden" style="min-width:240px;">
+                                <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                                <span class="relative z-10">Schedule Strategic Review</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                            </a>
+                            <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-5 rounded-xl font-bold text-sm text-secondary dark:text-gray-200 border border-gray-200 dark:border-white/10 bg-white/40 dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 backdrop-blur-md transition-all duration-300">
+                                Capability Portfolio
+                            </a>
                         </div>
-                        <div class="hidden md:block w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></div>
-                        <div class="flex items-center gap-3">
-                            <svg class="text-primary text-xl w-6 h-6" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
-                            </svg>
-                            <span class="text-sm font-semibold text-secondary dark:text-gray-300 tracking-wide">99%
-                                Compliance Rate</span>
+
+                        <!-- Trust Badge Cluster -->
+                        <div class="flex items-center gap-10 pt-10 border-t border-gray-100 dark:border-white/5">
+                            <div>
+                                <p class="text-3xl font-serif text-secondary dark:text-white font-bold mb-1">500+</p>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Active Clients</p>
+                            </div>
+                            <div class="w-px h-12 bg-gray-100 dark:bg-white/10"></div>
+                            <div>
+                                <p class="text-3xl font-serif text-secondary dark:text-white font-bold mb-1">99.9%</p>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Compliance Rate</p>
+                            </div>
+                            <div class="w-px h-12 bg-gray-100 dark:bg-white/10"></div>
+                            <div class="flex -space-x-3">
+                                <div class="w-12 h-12 rounded-full border-2 border-white dark:border-navy-dark bg-gray-50 shadow-sm flex items-center justify-center text-[10px] font-bold text-secondary">Global</div>
+                                <div class="w-12 h-12 rounded-full border-2 border-white dark:border-navy-dark bg-primary shadow-sm flex items-center justify-center text-[10px] font-bold text-white">India</div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- ── RIGHT COLUMN: Custom Visual (7 cols) ── -->
+                    <div class="lg:col-span-7 relative flex items-center justify-center">
+                        
+                        <!-- Main Frame — Anchored & High Contrast -->
+                        <div class="relative w-full max-w-[700px] h-[520px] rounded-[2.5rem] overflow-hidden shadow-[0_80px_160px_-40px_rgba(0,0,0,0.6)] border border-white/20 dark:border-white/10 bg-white">
+                            
+                            <!-- 1. BASE LAYER: Static Scene -->
+                            <img src="assets/images/Picsart_26-03-16_01-00-36-163.jpg" alt="AccoFin Strategic Visual" class="w-full h-full object-cover grayscale-[5%]" />
+                            
+                            <!-- 2. OCCLUSION LAYER: Blur patch to hide the static sphere in background -->
+                            <div class="absolute w-[20%] h-[25%] left-[50%] top-[26%] -translate-x-1/2 -translate-y-1/2 backdrop-blur-xl rounded-full opacity-90 pointer-events-none"></div>
+
+                            <!-- 3. FLOATING LAYER: Isolated Earth Element -->
+                            <div class="absolute inset-0 w-full h-full pointer-events-none" style="animation: heroFloatSubtle 8s ease-in-out infinite;">
+                                <div class="w-full h-full" style="clip-path: circle(13% at 50% 25.8%);">
+                                     <img src="assets/images/Picsart_26-03-16_01-00-36-163.jpg" alt="" class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Subtle Ambient Glow -->
+                        <div class="absolute top-0 -right-20 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] animate-gold-pulse-premium"></div>
+
+                        <!-- Stabilizing Side Accent -->
+                        <div class="absolute -right-12 top-1/2 -translate-y-1/2 w-px h-72 bg-gradient-to-b from-transparent via-white/10 to-transparent"></div>
+                    </div>
+
                 </div>
             </div>
+            </div>
+
+            <!-- === CUSTOM STYLES for high-contrast senior design === -->
+            <style>
+                @keyframes heroFloatSubtle {
+                    0%, 100% { transform: translateY(0px); }
+                    50% { transform: translateY(-5px); }
+                }
+                /* Real Textured glass cards */
+                .hero-glass {
+                    position: relative;
+                    background: rgba(255, 255, 255, 0.03);
+                    backdrop-filter: blur(40px);
+                    -webkit-backdrop-filter: blur(40px);
+                    border: 1px solid rgba(255, 255, 255, 0.25);
+                    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                    overflow: hidden;
+                }
+                .hero-glass::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Cfilter id='noiseFilter'%3%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3%3C/filter%3%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3%3C/svg%3E");
+                    opacity: 0.05;
+                    pointer-events: none;
+                }
+                .dark .hero-glass {
+                    background: rgba(10, 15, 30, 0.75);
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                }
+                /* Strong Text Contrast */
+                .hero-glass p, .hero-glass span {
+                    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+                }
+            </style>
         </header>
 
         <!-- Path Selection Section -->
@@ -547,13 +645,11 @@
                             </p>
                         </div>
                     </div>
-                    <!-- Image / Visual -->
-                    <div
-                        class="relative rounded-3xl overflow-hidden shadow-2xl reveal-on-load h-full min-h-[400px] md:min-h-[500px]">
-                        <img loading="lazy" src="assets/images/accounting-analysis.jpg"
-                            alt="Financial analysis and clarity"
-                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                    <!-- Style-Locked 3D Editorial Visual -->
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl reveal-on-load h-full min-h-[400px] md:min-h-[500px]">
+                        <img loading="lazy" src="assets/images/clarity-matters-stylelock.png" 
+                             alt="3D abstract representation of financial clarity and structural foundation" 
+                             class="w-full h-full object-cover" />
                     </div>
 
                 </div>
@@ -712,7 +808,7 @@
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-3.03 2.496c-.384.317-.626.74-.766 1.208m-2.15-5.346aM2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                                        d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-3.03 2.496c-.384.317-.626.74-.766 1.208m-2.15-5.346a1.2 1.2 0 111.444-1.444A1.2 1.2 0 0111.42 15.17zM2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
                                 </svg>
                             </div>
                             <h3
@@ -1014,9 +1110,9 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <img loading="lazy" alt="Stock market trends and financial analysis"
+                        <img loading="lazy" alt="Interlocking blocks symbolizing financial partnership and scale"
                             class="rounded-2xl shadow-2xl z-10 relative object-cover h-[600px] w-full border border-gray-200 dark:border-gray-700"
-                            src="financial-market-trends.jpg" />
+                            src="assets/images/partner-accofin-stylelock.png" />
                         <div
                             class="absolute -bottom-6 -left-6 bg-white dark:bg-card-dark p-4 rounded-xl shadow-xl z-20 border border-gray-100 dark:border-gray-800 flex items-center gap-3">
                             <span class="text-accent-gold text-lg">✦</span>
